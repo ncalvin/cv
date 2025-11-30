@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { DownloadIcon } from './Icons';
+import { DownloadIcon, MailIcon } from './Icons';
 import DownloadCVButton from './DownloadCVButton';
 import AvatarLogo from './AvatarLogo';
 import { motion, useInView, useSpring, useTransform } from 'framer-motion';
@@ -102,18 +102,14 @@ const Header: React.FC = () => {
             </div>
 
             <p style={styles.description} className="animate-on-scroll">
-              Impulsionando a transformação digital através de liderança técnica estratégica. Atuo como <strong>Tech Manager</strong> focado em arquitetura de soluções robustas e gestão de equipes de alta performance para maximizar resultados de negócios.
+              Impulsionando a transformação digital através de liderança técnica estratégica. Atuo como <strong>Tech Lead</strong> focado em arquitetura de soluções robustas e gestão de equipes de alta performance para maximizar resultados de negócios.
             </p>
+
+
 
             {/* CTA Buttons */}
             <div style={styles.ctaContainer} className="animate-on-scroll">
-              <button
-                onClick={scrollToContact}
-                className="btn btn-primary"
-                style={styles.ctaPrimary}
-              >
-                Entrar em Contato
-              </button>
+
               <button
                 onClick={handleDownloadCV}
                 className="btn btn-primary"
@@ -179,7 +175,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 };
 
