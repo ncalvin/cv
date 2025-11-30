@@ -114,13 +114,13 @@ const Header: React.FC = () => {
 
             {/* CTA Buttons */}
             <div style={styles.ctaContainer} className="animate-on-scroll">
-              <button
-                onClick={scrollToContact}
+              <a
+                href="#contact"
                 className="btn btn-primary"
-                style={styles.ctaPrimary}
+                style={{ ...styles.ctaPrimary, textDecoration: 'none', color: '#fff' }}
               >
                 Entrar em Contato
-              </button>
+              </a>
               <button
                 onClick={handleDownloadCV}
                 className="btn btn-primary"
