@@ -34,22 +34,30 @@
 /* Variants */
 
 /* Primary Variant (Hero) */
+/* Primary Variant (Hero) */
 .cv-btn--primary {
-    background: linear-gradient(135deg, var(--color-primary, #2563eb) 0%, #1d4ed8 100%);
-    color: white;
-    padding: 0.875rem 1.75rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    font-size: 1rem;
+    background: var(--color-text-primary, #0f172a);
+    color: var(--color-bg-primary, #ffffff);
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cv-btn--primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+    transform: translateY(-1px);
+    background: var(--color-primary, #2563eb);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .cv-btn--primary:active {
     transform: translateY(0);
+    transform: scale(0.98);
 }
 
 /* Icon-only Variant (Header/Top-right) */

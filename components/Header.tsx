@@ -534,10 +534,6 @@ if (typeof window !== 'undefined') {
       margin: 0,
     });
 
-    Object.assign(styles.ctaContainer, {
-      justifyContent: 'flex-start',
-    });
-
     Object.assign(styles.statsContainer, {
       justifyContent: 'flex-start',
     });
