@@ -26,6 +26,14 @@ export interface Skill {
   level: number;
 }
 
+export interface SkillCard extends Skill {
+  description: string;
+  tagline?: string;
+  impactStatement?: string;
+  results?: string[];
+  chips?: string[];
+}
+
 export interface Project {
   title: string;
   description: string;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
-import { SkillFlipCard, skillsData } from './SkillCard';
+import { SkillFlipCard } from './SkillCard';
+import { skillsData } from '../data/skillsData';
 
 const SkillsChart: React.FC = () => {
   return (

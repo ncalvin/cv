@@ -1,13 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import type { Skill } from '../types';
-
-export interface SkillCard extends Skill {
-    description: string;
-    tagline?: string;
-    impactStatement?: string;
-    results?: string[];
-    chips?: string[];
-}
+import type { SkillCard } from '../types';
 
 export interface FlipCardProps {
     skill: SkillCard;
@@ -17,81 +9,6 @@ export interface FlipCardProps {
     axis?: 'y' | 'x';
     disabled?: boolean;
 }
-
-export const skillsData: SkillCard[] = [
-    {
-        name: 'Salesforce',
-        level: 95,
-        tagline: 'Soluções enterprise que transformam',
-        impactStatement: '12 projetos · 3 países',
-        description: 'Service Cloud, Field Service, CRM, CPQ e integração complexa de sistemas',
-        results: ['+45% conversão', '12 projetos', '3 países'],
-        chips: ['Service Cloud', 'Field Service', 'CPQ']
-    },
-    {
-        name: 'Fintech & Payments',
-        level: 90,
-        tagline: 'Pagamentos seguros e escaláveis',
-        impactStatement: '5M+ transações processadas',
-        description: 'Arquitetura de pagamentos digitais com compliance PCI-DSS',
-        results: ['99.9% uptime', '5M+ transações', 'PCI-DSS'],
-        chips: ['PCI-DSS', 'Gateways', 'Fraud Detection']
-    },
-    {
-        name: 'Cloud Architecture',
-        level: 90,
-        tagline: 'Infraestrutura moderna e resiliente',
-        impactStatement: 'multi-cloud · serverless',
-        description: 'AWS, Azure, arquitetura serverless e microsserviços escaláveis',
-        results: ['-40% custos', '99.95% SLA', 'Multi-cloud'],
-        chips: ['AWS', 'Azure', 'Serverless']
-    },
-    {
-        name: 'Python',
-        level: 85,
-        tagline: 'Backend robusto e performático',
-        impactStatement: '8 anos · 20+ APIs',
-        description: 'Django, FastAPI, data processing e automação de processos',
-        results: ['8+ anos', '20+ APIs', 'ETL pipelines'],
-        chips: ['Django', 'FastAPI', 'Pandas']
-    },
-    {
-        name: 'Node.js',
-        level: 85,
-        tagline: 'APIs rápidas e escaláveis',
-        impactStatement: '10K+ req/s · real-time',
-        description: 'Express, REST APIs, microservices e aplicações real-time',
-        results: ['10K+ req/s', '15+ APIs', 'WebSockets'],
-        chips: ['Express', 'NestJS', 'Socket.io']
-    },
-    {
-        name: 'Cybersecurity',
-        level: 80,
-        tagline: 'Segurança em cada camada',
-        impactStatement: 'zero breach · SOC 2',
-        description: 'Fortify, ForgeRock, compliance e testes de penetração',
-        results: ['Zero breach', 'SOC 2', 'Pen testing'],
-        chips: ['Fortify', 'ForgeRock', 'OWASP']
-    },
-    {
-        name: 'DevOps (CI/CD)',
-        level: 80,
-        tagline: 'Deploy contínuo e confiável',
-        impactStatement: '50+ deploys/mês · zero downtime',
-        description: 'GitLab, Jenkins, Docker, Ansible e orquestração Kubernetes',
-        results: ['50+ deploys/mês', '95% automação', 'Zero downtime'],
-        chips: ['GitLab CI', 'Docker', 'K8s']
-    },
-    {
-        name: 'Databricks',
-        level: 75,
-        tagline: 'Big Data e Analytics',
-        impactStatement: '5TB+ · 100M records',
-        description: 'Apache Spark, migração de dados e pipelines ETL robustos',
-        results: ['5TB+ migrados', '100M+ records', 'Delta Lake'],
-        chips: ['Spark', 'Delta Lake', 'MLflow']
-    },
-];
 
 const CARD_ACCENT = '#6EA8FF';
 const CARD_ACCENT_SOFT = 'rgba(110, 168, 255, 0.16)';
