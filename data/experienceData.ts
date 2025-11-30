@@ -28,26 +28,26 @@ export const experienceData: ExperienceItem[] = [
     },
     {
         company: 'PagoNxt (a Santander company)',
-        role: 'Tech Manager & Arquiteto de Soluções',
+        role: 'Consultor Salesforce & Arquiteto de Soluções',
         period: 'outubro de 2022 - outubro de 2024',
         location: 'Porto Alegre, RS',
         summary: 'Gestão integral do ciclo de vida de desenvolvimento de software, garantindo entregas pontuais e alinhamento estratégico com objetivos corporativos globais.',
         description: [
-            'Atuei como Tech Manager gerenciando times multidisciplinares em projetos globais de pagamentos e CRM.',
-            'Liderei a arquitetura e integração de dados complexos utilizando Databricks e Salesforce, otimizando a tomada de decisão.',
+            'Atuei como Consultor Salesforce gerenciando atuando com times multidisciplinares em projetos globais de pagamentos e CRM.',
+            'Colaborei com a arquitetura e integração de dados utilizando Databricks e Salesforce.',
             'Implementei processos de governança de TI que aumentaram a previsibilidade e qualidade das entregas.',
-            'Coordenei stakeholders internacionais no México e Chile para alinhar requisitos de negócios e soluções técnicas.'
+            'Atuei com stakeholders internacionais no México e Chile para alinhar requisitos de negócios e soluções técnicas.'
         ],
         results: [
             'Entrega pontual de projetos críticos de transformação digital.',
             'Melhoria na satisfação dos stakeholders através de comunicação transparente e gestão eficaz.'
         ],
-        skills: ['Tech Manager', 'Salesforce', 'Databricks', 'Gestão de Equipes', 'Integração de Sistemas'],
+        skills: ['Tech Lead', 'Salesforce', 'Databricks', 'Consultoria', 'Integração de Sistemas'],
         link: 'https://www.pagonxt.com'
     },
     {
         company: 'IBM IX',
-        role: 'Desenvolvedor Sênior Salesforce',
+        role: 'Consultor Sênior Salesforce',
         period: 'setembro de 2021 - outubro de 2022',
         location: 'Remoto',
         summary: 'Desenvolvimento e implementação de customizações avançadas em Apex e LWC, elevando a performance e a usabilidade do CRM para usuários finais.',
@@ -72,10 +72,10 @@ export const experienceData: ExperienceItem[] = [
         description: [
             'Atuei como Consultor Salesforce em projetos de CRM para a Deutsche Telekom na Alemanha.',
             'Implementei soluções robustas focadas em transformação digital e segurança.',
-            'Liderei iniciativas como DevOps Product Owner.'
+            'Liderei iniciativas como DevOps Product Owner, SAP / Node.js / Python & Salesforce.'
         ],
         results: [
-            'Implementação bem-sucedida de projetos de CRM na Alemanha.',
+            'Implementação bem-sucedida da Plataforma devpops Magenta CI/CD & entrega contínua. (Alemanha)',
             'Melhoria nos processos de DevOps e entrega contínua.'
         ],
         skills: ['Salesforce', 'DevOps', 'GitLab', 'Docker', 'Jenkins', 'Ansible'],
