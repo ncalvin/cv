@@ -14,17 +14,6 @@ export interface SoftSkill {
  */
 export const softSkillsData: SoftSkill[] = [
     {
-        name: 'Liderança Técnica',
-        icon: 'compass',
-        tagline: 'Guiar equipes com visão clara',
-        description: 'Capacidade de definir direção técnica, inspirar equipes e tomar decisões arquiteturais que equilibram inovação com pragmatismo.',
-        examples: [
-            'Definição de roadmaps técnicos',
-            'Tomada de decisões arquiteturais',
-            'Inspiração e motivação de times'
-        ]
-    },
-    {
         name: 'Comunicação Efetiva',
         icon: 'message',
         tagline: 'Traduzir complexidade em clareza',
