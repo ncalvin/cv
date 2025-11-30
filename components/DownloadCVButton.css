@@ -1,0 +1,160 @@
+/* DownloadCVButton.css */
+
+/* Base Styles */
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cv-btn:focus-visible {
+    outline: 2px solid var(--color-primary, #007bff);
+    outline-offset: 2px;
+}
+
+.cv-btn:disabled,
+.cv-btn--loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Variants */
+
+/* Primary Variant (Hero) */
+.cv-btn--primary {
+    background: linear-gradient(135deg, var(--color-primary, #2563eb) 0%, #1d4ed8 100%);
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+}
+
+.cv-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+}
+
+.cv-btn--primary:active {
+    transform: translateY(0);
+}
+
+/* Icon-only Variant (Header/Top-right) */
+.cv-btn--icon {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-secondary, #64748b);
+    padding: 0.5rem;
+    border-radius: 50%;
+    /* Circular or rounded square */
+    width: 40px;
+    height: 40px;
+}
+
+.cv-btn--icon:hover {
+    background: rgba(var(--color-primary-rgb, 37, 99, 235), 0.1);
+    color: var(--color-primary, #2563eb);
+    border-color: var(--color-primary, #2563eb);
+    transform: scale(1.05);
+}
+
+/* FAB Variant (Mobile) */
+.cv-btn--fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary, #2563eb);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    /* Hidden by default on desktop */
+}
+
+@media (max-width: 768px) {
+    .cv-btn--fab {
+        display: flex;
+    }
+
+    .cv-btn--primary {
+        display: none;
+        /* Hide primary on mobile if FAB is preferred, or keep both */
+    }
+}
+
+.cv-btn--fab:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cv-btn--fab:active {
+    transform: scale(0.95);
+}
+
+/* Loading Spinner */
+.cv-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: cv-spin 0.75s linear infinite;
+}
+
+@keyframes cv-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .cv-btn,
+    .cv-spinner {
+        transition: none;
+        animation: none;
+        transform: none !important;
+    }
+}
+
+/* Toast Notification */
+.cv-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.cv-toast--visible {
+    opacity: 1;
+}
