@@ -69,16 +69,9 @@ const Header: React.FC = () => {
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById('contact-section');
     if (contactSection) {
-      const headerOffset = 80;
-      const elementPosition = contactSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -114,13 +107,13 @@ const Header: React.FC = () => {
 
             {/* CTA Buttons */}
             <div style={styles.ctaContainer} className="animate-on-scroll">
-              <a
-                href="#contact"
+              <button
+                onClick={scrollToContact}
                 className="btn btn-primary"
-                style={{ ...styles.ctaPrimary, textDecoration: 'none', color: '#fff' }}
+                style={styles.ctaPrimary}
               >
                 Entrar em Contato
-              </a>
+              </button>
               <button
                 onClick={handleDownloadCV}
                 className="btn btn-primary"

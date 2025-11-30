@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
     { href: '#experience', label: 'Experiência' },
     { href: '#skills', label: 'Habilidades' },
     { href: '#projects', label: 'Projetos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '#contact-section', label: 'Contato' },
   ];
 
   // Close mobile menu on resize

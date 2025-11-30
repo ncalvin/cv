@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <Section id="contact" title="Vamos Conversar?">
+    <Section id="contact-section" title="Vamos Conversar?">
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-3xl)' }} className="animate-on-scroll">
           <p style={{
