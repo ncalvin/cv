@@ -3,9 +3,38 @@ import Section from './Section';
 import { LinkedinIcon, GithubIcon, MailIcon } from './Icons';
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSuccess, setIsSuccess] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Obrigado pelo seu contato! Esta é uma demonstração; o formulário não está ativo.");
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/newton.calvin@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+      } else {
+        setErrorMessage('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+      }
+    } catch (error) {
+      setErrorMessage('Ocorreu um erro de conexão. Verifique sua internet e tente novamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -57,7 +86,9 @@ const Contact: React.FC = () => {
               <MailIcon style={{ width: '1.5rem', height: '1.5rem' }} />
             </a>
             <a
-              href="#"
+              href="https://github.com/ncalvin"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -77,110 +108,160 @@ const Contact: React.FC = () => {
 
         {/* Contact Form - Minimalist */}
         <div className="animate-on-scroll">
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-              <div>
-                <label htmlFor="name" className="sr-only">Nome</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Seu Nome"
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '0 0 0.75rem 0',
-                    backgroundColor: 'transparent',
-                    border: 'none',
-                    borderBottom: '1px solid var(--color-border)',
-                    fontSize: '1rem',
-                    color: 'var(--color-text-primary)',
-                    transition: 'border-color 0.2s ease',
-                    outline: 'none',
-                    borderRadius: 0
-                  }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
-                  onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="sr-only">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Seu Email"
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '0 0 0.75rem 0',
-                    backgroundColor: 'transparent',
-                    border: 'none',
-                    borderBottom: '1px solid var(--color-border)',
-                    fontSize: '1rem',
-                    color: 'var(--color-text-primary)',
-                    transition: 'border-color 0.2s ease',
-                    outline: 'none',
-                    borderRadius: 0
-                  }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
-                  onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="message" className="sr-only">Mensagem</label>
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                placeholder="Sua Mensagem"
-                required
+          {isSuccess ? (
+            <div style={{
+              textAlign: 'center',
+              padding: '2rem',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderRadius: 'var(--radius-lg)',
+              border: '1px solid rgba(16, 185, 129, 0.3)'
+            }}>
+              <h3 style={{ color: '#10b981', marginBottom: '0.5rem' }}>Mensagem Enviada!</h3>
+              <p style={{ color: 'var(--color-text-secondary)' }}>Obrigado pelo contato. Retornarei o mais breve possível.</p>
+              <button
+                onClick={() => setIsSuccess(false)}
                 style={{
-                  width: '100%',
-                  padding: '0 0 0.75rem 0',
+                  marginTop: '1.5rem',
+                  padding: '0.5rem 1.5rem',
                   backgroundColor: 'transparent',
-                  border: 'none',
-                  borderBottom: '1px solid var(--color-border)',
-                  fontSize: '1rem',
-                  color: 'var(--color-text-primary)',
-                  transition: 'border-color 0.2s ease',
-                  outline: 'none',
-                  resize: 'vertical',
-                  fontFamily: 'inherit',
-                  borderRadius: 0
+                  color: '#10b981',
+                  border: '1px solid #10b981',
+                  borderRadius: 'var(--radius-full)',
+                  cursor: 'pointer',
+                  fontSize: '0.875rem'
                 }}
-                onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
-                onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
-              />
+              >
+                Enviar outra mensagem
+              </button>
             </div>
-            <button
-              type="submit"
-              style={{
-                alignSelf: 'center', // Centered button
-                padding: '0.75rem 2rem',
-                backgroundColor: 'transparent',
-                color: 'var(--color-primary)',
-                border: '1px solid var(--color-primary)',
-                borderRadius: 'var(--radius-full)',
-                fontSize: '0.9375rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                marginTop: '1rem'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--color-primary)';
-                e.currentTarget.style.color = '#fff';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = 'var(--color-primary)';
-              }}
-            >
-              Enviar Mensagem
-            </button>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <input type="hidden" name="_subject" value="Novo contato via Portfolio" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                <div>
+                  <label htmlFor="name" className="sr-only">Nome</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Seu Nome"
+                    required
+                    disabled={isSubmitting}
+                    style={{
+                      width: '100%',
+                      padding: '0 0 0.75rem 0',
+                      backgroundColor: 'transparent',
+                      border: 'none',
+                      borderBottom: '1px solid var(--color-border)',
+                      fontSize: '1rem',
+                      color: 'var(--color-text-primary)',
+                      transition: 'border-color 0.2s ease',
+                      outline: 'none',
+                      borderRadius: 0,
+                      opacity: isSubmitting ? 0.7 : 1
+                    }}
+                    onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
+                    onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="sr-only">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Seu Email"
+                    required
+                    disabled={isSubmitting}
+                    style={{
+                      width: '100%',
+                      padding: '0 0 0.75rem 0',
+                      backgroundColor: 'transparent',
+                      border: 'none',
+                      borderBottom: '1px solid var(--color-border)',
+                      fontSize: '1rem',
+                      color: 'var(--color-text-primary)',
+                      transition: 'border-color 0.2s ease',
+                      outline: 'none',
+                      borderRadius: 0,
+                      opacity: isSubmitting ? 0.7 : 1
+                    }}
+                    onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
+                    onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                  />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="message" className="sr-only">Mensagem</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={4}
+                  placeholder="Sua Mensagem"
+                  required
+                  disabled={isSubmitting}
+                  style={{
+                    width: '100%',
+                    padding: '0 0 0.75rem 0',
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    borderBottom: '1px solid var(--color-border)',
+                    fontSize: '1rem',
+                    color: 'var(--color-text-primary)',
+                    transition: 'border-color 0.2s ease',
+                    outline: 'none',
+                    resize: 'vertical',
+                    fontFamily: 'inherit',
+                    borderRadius: 0,
+                    opacity: isSubmitting ? 0.7 : 1
+                  }}
+                  onFocus={(e) => e.currentTarget.style.borderColor = 'var(--color-primary)'}
+                  onBlur={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
+                />
+              </div>
+
+              {errorMessage && (
+                <p style={{ color: '#ef4444', fontSize: '0.875rem', textAlign: 'center' }}>{errorMessage}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                style={{
+                  alignSelf: 'center', // Centered button
+                  padding: '0.75rem 2rem',
+                  backgroundColor: isSubmitting ? 'var(--color-border)' : 'transparent',
+                  color: isSubmitting ? 'var(--color-text-secondary)' : 'var(--color-primary)',
+                  border: `1px solid ${isSubmitting ? 'var(--color-border)' : 'var(--color-primary)'}`,
+                  borderRadius: 'var(--radius-full)',
+                  fontSize: '0.9375rem',
+                  fontWeight: 600,
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  transition: 'all 0.2s ease',
+                  marginTop: '1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}
+                onMouseOver={(e) => {
+                  if (!isSubmitting) {
+                    e.currentTarget.style.backgroundColor = 'var(--color-primary)';
+                    e.currentTarget.style.color = '#fff';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (!isSubmitting) {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = 'var(--color-primary)';
+                  }
+                }}
+              >
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </Section>
