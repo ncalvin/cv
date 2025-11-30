@@ -1,0 +1,2638 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    
+    
+    <meta charset="UTF-8"/>
+    <title>Not Found</title>
+    
+    <meta name="template" content="content-page"/>
+    <meta name="description" content="Not Found"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    
+    <meta name="viewport" content="width=device-width, maximum-scale=2, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta property="og:title" content="Not Found"/>
+    <meta property="og:description" content="Not Found"/>
+    <meta property="og:image" content="https://www.santander.com/content/dam/santander-com/images/image-resources/backup-images/desktop/CGS_ElFaro_3_Desktop.jpg.transform/rendition-sm/image.jpg"/>
+    <meta property="og:image:alt"/>
+    <meta property="og:url" content="https://www.santander.com/en/errors/404"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:title" content="Not Found"/>
+    <meta property="twitter:description" content="Not Found"/>
+    <meta name="google-site-verification" content="YxmFpPn2d-Xkccvvxh_KIJcLHeDb5TjElyvTzki-UiQ"/>
+    
+    <meta property="twitter:image" content="https://www.santander.com/content/dam/santander-com/images/image-resources/backup-images/desktop/CGS_ElFaro_3_Desktop.jpg.transform/rendition-sm/image.jpg"/>
+    <meta property="twitter:image:alt"/>
+    <meta property="common-lang-path" content="/errors/404/"/>
+    <meta property="lang-copy" content="true"/>
+    <meta property="adobe-target-flag" content="false"/>
+    <meta itemprop="datePublished"/>
+    <meta content="2020-10-09 15:51:11.708+0200" itemprop="dateModified"/>
+    <script defer="defer" type="text/javascript" src="/.rum/@adobe/helix-rum-js@%5E2/dist/rum-standalone.js" data-status="404"></script>
+<link rel="canonical" href="https://www.santander.com/en/errors/404/"/>
+    <link rel="alternate" hreflang="x-default" href="https://www.santander.com/en/errors/404/"/>
+    <link rel="alternate" hreflang="es" href="https://www.santander.com/es/errors/404/"/>
+
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/dam/santander-com/resources/favicon/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/content/dam/santander-com/resources/favicon/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/content/dam/santander-com/resources/favicon/apple-touch-icon-120x120.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/content/dam/santander-com/resources/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/content/dam/santander-com/resources/favicon/favicon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="144x144" href="/content/dam/santander-com/resources/favicon/favicon-144x144.png"/>
+    <link rel="icon" type="image/png" sizes="128x128" href="/content/dam/santander-com/resources/favicon/favicon-128x128.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/content/dam/santander-com/resources/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="48x48" href="/content/dam/santander-com/resources/favicon/favicon-48x48.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/content/dam/santander-com/resources/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-site/resources/site.webmanifest"/>
+    <link rel='mask-icon' href='/content/dam/santander-com/resources/favicon/mask-icon.svg' color='#ec0000'/>
+    <link rel="icon" type="image/x-icon" href="/content/dam/santander-com/resources/favicon/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ffffff"/>
+    
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-base.lc-dae724402afea2e37a64f9f2a39906bd-lc.min.css" type="text/css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-site.lc-e08cb4e5b6e3291225a3505e85577aed-lc.min.css" type="text/css">
+
+
+
+
+
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/vendor/jquery.lc-dc5e7f18c8d36ac1d3d4753a87c98d0a-lc.min.js"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+        const cookies_servlet_path = "/content/santander-corporate/san-global/servlet/jcr:content.cookies.html";
+        let allP = window.location.pathname;
+        let currLan = (allP.indexOf("/es/") <= -1 ) ? 'en': 'es';
+        $.ajax({
+            type: "GET",
+            url: cookies_servlet_path,
+            async: true,
+            cache: false,
+            crossDomain: true,
+            data: {curr_lang: currLan},
+            xhrFields: {withCredentials: true},
+            success: function(data) {},
+            error: function(data) {console.log("Santander.com - Language Cookie Error");}
+        })
+    });
+</script>
+
+    
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+    <script type="text/javascript">var anlitycResponse;</script>
+    
+    
+    
+    
+    
+    
+    
+</head>
+    <body class="page basicpage" id="page-fdc66072e8" data-cmp-data-layer-enabled>
+        <script>
+          window.adobeDataLayer = window.adobeDataLayer || [];
+          adobeDataLayer.push({
+              page: JSON.parse("{\x22page\u002Dfdc66072e8\x22:{\x22@type\x22:\x22santander\u002Dcorporate\/components\/structure\/page\x22,\x22repo:modifyDate\x22:\x222020\u002D10\u002D09T13:51:11Z\x22,\x22dc:title\x22:\x22Not Found\x22,\x22xdm:template\x22:\x22\/conf\/santander\u002Dcorporate\/settings\/wcm\/templates\/content\u002Dpage\x22,\x22xdm:language\x22:\x22en\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/santander\u002Dcorporate\/san\u002Dglobal\/en\/errors\/404\/.html\x22}}"),
+              event:'cmp:show',
+              eventInfo: {
+                  path: 'page.page\u002Dfdc66072e8'
+              }
+          });
+        </script>
+        
+        
+            
+
+
+
+
+            
+
+
+
+            <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header-xf experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+     
+    <div class="xfpage page basicpage">
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-header.lc-77a368e3b008f0e6ba8a568ee809d4eb-lc.min.css" type="text/css">
+
+
+
+
+
+<header>
+    <input type="hidden" class="nameComponent" value="header"/>
+    <div class="dialogText d-none"></div>
+    <input type="hidden" id="sanRedirect" name="sanRedirect" value="online banking"/>
+    <div class=" header-wrapper">
+        <div class="header__redirector" id="redirectorMain">
+            
+
+    
+
+
+            
+
+    
+        
+    
+    
+
+        </div>
+        <div class="header-container">
+            <div class="header__logo">
+                
+
+
+
+
+
+  <a href="https://www.santander.com/en/home" class="header-logo__url">
+    <img src="/content/dam/santander-com/images/logo/santander-logo-positive.svg" alt="Santander Bank" class="header-logo__img"/>
+  </a>
+
+
+            </div>
+            <div class="header-container-redirector">
+                <div class="header__quicklinks">
+                    
+
+<ul class="header__quicklinks-container">
+    <li class="header-quicklinks__item">
+        <a href="https://www.santander.com/en/about-us" class="header-quicklinks-item__text" target="_self">
+            About Us
+        </a>
+    </li>
+
+    <li class="header-quicklinks__item">
+        <a href="https://www.santander.com/en/our-approach" class="header-quicklinks-item__text" target="_self">
+            Our Approach
+        </a>
+    </li>
+
+    <li class="header-quicklinks__item">
+        <a href="https://www.santander.com/en/shareholders-and-investors" class="header-quicklinks-item__text" target="_self">
+            Shareholders and Investors
+        </a>
+    </li>
+
+    <li class="header-quicklinks__item">
+        <a href="https://www.santander.com/en/press-room" class="header-quicklinks-item__text" target="_self">
+            Press Room
+        </a>
+    </li>
+
+    <li class="header-quicklinks__item">
+        <a href="https://www.santander.com/en/careers" class="header-quicklinks-item__text" target="_self">
+            Careers
+        </a>
+    </li>
+</ul>
+                    <!-- SDI include (path: /content/experience-fragments/santander_corporate/san-global/english/header---en/header-positive-en/_jcr_content/root/responsivegrid/header/header-corporate-shares-simple.content.nocache.html, resourceType: santander-corporate/components/content/commons/corporate-shares-simple) -->
+<!--#include virtual="/content/experience-fragments/santander_corporate/san-global/english/header---en/header-positive-en/_jcr_content/root/responsivegrid/header/header-corporate-shares-simple.content.nocache.html" -->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-header.lc-3f9fab0e3c3150cc90bd9c570a0db871-lc.min.js"></script>
+
+
+
+
+</div>
+<div class="insert-html aem-GridColumn aem-GridColumn--default--12">
+<div class="insert-html-component">
+    
+    <script>
+var firstDiv = document.getElementsByClassName('header__quicklinks-container')[0]; 
+
+var secondDiv = document.getElementsByClassName('corporate-shares-simple-uni')[0]; 
+
+	secondDiv.style.display= 'block';
+	secondDiv.style.visibility= 'hidden';
+
+           var checkSecondDivDisplay = setInterval(function() {
+            if (window.getComputedStyle(secondDiv).display === 'flex') {
+   
+                secondDiv.style.visibility= 'visible';
+                clearInterval(checkSecondDivDisplay);
+            }
+        }, 100); 
+</script>
+    
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+</div>
+
+    
+    
+    
+
+
+
+
+</div>
+<div class="navigation-menu-xf experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+     
+    
+    <div class="xfpage page basicpage">
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="navigation-menu aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-navigation-menu.lc-d51e4e0689b510e89b8a7b3fa86697e9-lc.min.css" type="text/css">
+
+
+
+
+
+
+
+
+
+    <div>
+
+<div class="container-page">
+    <input type="hidden" class="nameComponent" value="navigation-menu"/>
+    <div class="dialogText d-none"></div>
+    <div class="search-box-wrapper">
+        
+        
+        <input type="hidden" id="pathSearchPageMenu" name="pathSearchPageMenu" value="https://www.santander.com/en/search-results"/>
+        <div class="container-page">
+            <div class="search-box">
+                <input class="search-box-input" type="text" name="search-box" aria-label="How can we help?" placeholder="How can we help?"/>
+                <span class="icon icon-search" aria-label="Search"></span>
+            </div>
+            <div class="search-box-info">
+                <span class="search-box-info-text">
+                    Enter at least
+                    <b> two characters</b>
+                     to search.
+                </span>
+            </div>
+            <div class="search-box-loader">
+               
+                <div id="lottie-search" aria-hidden="true"></div>
+            </div>
+            <div class="search-box-results">
+                <span class="sb-results-title-ok"> SUGGESTED RESULTS</span>
+                <span class="sb-results-title-ko"> THERE ARE NO SUGGESTED RESULTS</span>
+                <div class="traveling-results">
+                </div>
+                <div class="sb-button-container">
+                    <a class="sb-button button button__secondary" href="https://www.santander.com/en/search-results" rel="nofollow">
+                        SEE ALL RESULTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="menu-lateral " role="navigation">
+    <input type="hidden" id="backLiteral" name="filterType" value="Back"/>
+    <input type="hidden" id="knowMoreLiteral" name="nameDocuments" value="More"/>
+    <!-- <nav aria-label="Quick access" tabindex="-1" > -->
+        <ul class="menu-level1" role="none" aria-label="Quick access">
+            
+                
+                    <li class="mandatory" role="listitem">
+                        <a href="https://www.santander.com/en/home" title="" aria-label="Go to the home page">
+                        
+                            <span class="icon icon-llama logo-menu">
+                            <span class="text-acce">Santander</span>
+                            </span>
+                        
+                        
+                        </a>
+                    </li>
+                
+            <!-- HAMBURGER MENU / REQUIRED OPTION -->
+            <li class="icon-menu-lat mandatory" role="listitem">
+                <div class="hamburger" role="button" tabindex="0" aria-label="Menu">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner">
+                            <span class="text-acce">Menu</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- SEARCH / REQUIRED OPTION -->
+            <li role="listitem" tabindex="0" class="mandatory search-enter" aria-label="Search">
+                <span class="icon icon-search">
+                    <span class="text-acce">Search</span>
+                </span>
+            </li>
+            <!-- LANGUAGE / REQUIRED OPTION -->
+            <li class="lenguage mandatory change-lenguage" aria-label="Change language" role="listitem">
+                
+                    <input type="hidden" name="targetPathValue" value="https://www.santander.com/es/errors/404"/>
+                    <a role="button" tabindex="0" aria-label="Español">
+                        <span id="es" class="icon-es text-lenguage"></span>
+                        <a href="https://www.santander.com/es/errors/404" class="text-acce">
+                            404
+                        </a>
+                        
+
+                    </a>
+                
+            </li>
+            
+                <li role="listitem" aria-label="shares of stock">
+                    <span class="icon icon-stock">
+                        <span class="text-acce">shares of stock</span>
+                    </span>
+                </li>
+            
+            
+                <li role="listitem" aria-label="Share">
+                    <span class="icon icon-share">
+                        <span class="text-acce">Share</span>
+                    </span>
+                </li>
+            
+            
+        </ul>
+    <!-- </nav> -->
+    <div class="menu-level2">
+        <div class="block-level">
+            <!--   <div class="lenguage">
+        <sly data-sly-list.mylanguage="com.santander.corporate.core.models.components.navigationmenu.MenuLanguageDTOHeritance@67a1481a">
+          <a href=" " title="" >
+            <span class="icon icon-language"></span>
+            <span id="" class="text-lenguage"></span>
+          </a>
+        </sly>
+      </div> -->
+            <div class="menu-wrapper button-banca">
+                <div class="menu-container-redirector">
+                    <div class="menu__redirector">
+                        <!-- <sly data-sly-resource="menu-redirection.menu-redirector"></sly> -->
+                        
+
+    
+    
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="redirector aem-GridColumn aem-GridColumn--default--12">
+
+<div class="dropdown-wrapper">
+    <div class="btn-group dropdown__container dropdown__container--filter header-redirector__item">
+        <a class="btn header-redirector-item--cookie" href="" target="_blank" rel="noopener noreferrer"></a>
+        <button class="btn dropdown-toggle dropdownMenu" data-toggle="dropdown" aria-label="button-redirector">
+            <span class="icon icon-down"></span>
+        </button>
+        <div class="dropdown-menu dropdown__items" role="menu" aria-label="dropdownMenu">
+            <a href="https://www.santander.com.ar/banco/online/personas" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/argentina.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Argentina</span></a>
+        
+            <a href="https://www.santander.com.br/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/brazil.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Brazil</span></a>
+        
+            <a href="https://banco.santander.cl/personas" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/chile.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Chile</span></a>
+        
+            <a href="https://www.santander.de/privatkunden/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/germany.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Germany</span></a>
+        
+            <a href="https://www.santander.com.mx/index.html" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/mexico.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Mexico</span></a>
+        
+            <a href="https://www.santander.com.pe/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/peru.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Peru</span></a>
+        
+            <a href="https://www.santander.pl/klient-indywidualny" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/poland.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Poland</span></a>
+        
+            <a href="https://www.santander.pt/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/portugal.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Portugal</span></a>
+        
+            <a href="https://www.bancosantander.es/en/particulares" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/spain.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Spain</span></a>
+        
+            <a href="https://www.santander.co.uk/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/united-kingdom.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>United Kingdom</span></a>
+        
+            <a href="https://www.santanderbank.com/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/united-states.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>United States</span></a>
+        
+            <a href="https://www.santander.com.uy/" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/uruguay.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Uruguay</span></a>
+        
+            <a href="https://www.santander.com/en/about-us/financial-services" target="_blank" rel="noopener noreferrer" class="header-redirector__item"><img src="/content/dam/santander-com/paises/san-logo.png.transform/rendition-xs/image.png" alt class="header-redirector-item__img"/><span>Directory</span></a>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+            <nav class="cmp-navigation " role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 ">
+        
+    
+
+    <a href="https://www.santander.com/en/home" title="Home" aria-label="page-https://www.santander.com/en/home" class="cmp-navigation__item-link">Home</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us" title="About us" aria-label="page-https://www.santander.com/en/about-us" class="cmp-navigation__item-link">About us</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/key-facts-and-figures" title="Key facts and figures" aria-label="page-https://www.santander.com/en/about-us/key-facts-and-figures" class="cmp-navigation__item-link">Key facts and figures</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/our-model" title="Our model" aria-label="page-https://www.santander.com/en/about-us/our-model" class="cmp-navigation__item-link">Our model</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/our-culture" title="Our culture" aria-label="page-https://www.santander.com/en/about-us/our-culture" class="cmp-navigation__item-link">Our culture</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/our-brand" title="Our brand" aria-label="page-https://www.santander.com/en/about-us/our-brand" class="cmp-navigation__item-link">Our brand</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/our-board" title="Our board" aria-label="page-https://www.santander.com/en/about-us/our-board" class="cmp-navigation__item-link">Our board</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/about-us/our-history" title="Our history" aria-label="page-https://www.santander.com/en/about-us/our-history" class="cmp-navigation__item-link">Our history</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach" title="Our approach" aria-label="page-https://www.santander.com/en/our-approach" class="cmp-navigation__item-link">Our approach</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/sustainability" title="Sustainability" aria-label="page-https://www.santander.com/en/our-approach/sustainability" class="cmp-navigation__item-link">Sustainability</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/sustainability/our-climate-transition-plan" title="Our climate transition plan " aria-label="page-https://www.santander.com/en/our-approach/sustainability/our-climate-transition-plan" class="cmp-navigation__item-link">Our climate transition plan </a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/sustainability/supporting-communities" title="Supporting communities" aria-label="page-https://www.santander.com/en/our-approach/sustainability/supporting-communities" class="cmp-navigation__item-link">Supporting communities</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/sustainability/reports" title="Reports" aria-label="page-https://www.santander.com/en/our-approach/sustainability/reports" class="cmp-navigation__item-link">Reports</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship" title="Education, employability and entrepreneurship" aria-label="page-https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship" class="cmp-navigation__item-link">Education, employability and entrepreneurship</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/education" title="Education" aria-label="page-https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/education" class="cmp-navigation__item-link">Education</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/employability" title="Employability" aria-label="page-https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/employability" class="cmp-navigation__item-link">Employability</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/entrepreneurship" title="Entrepreneurship" aria-label="page-https://www.santander.com/en/our-approach/education-employability-and-entrepreneurship/entrepreneurship" class="cmp-navigation__item-link">Entrepreneurship</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/our-approach/policies-and-initiatives" title="Policies &amp; Initiatives" aria-label="page-https://www.santander.com/en/our-approach/policies-and-initiatives" class="cmp-navigation__item-link">Policies &amp; Initiatives</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors" title="Shareholders and Investors" aria-label="page-https://www.santander.com/en/shareholders-and-investors" class="cmp-navigation__item-link">Shareholders and Investors</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share" title="Santander Share" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share" class="cmp-navigation__item-link">Santander Share</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/price" title="Price" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/price" class="cmp-navigation__item-link">Price</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/shareholder-remuneration" title="Shareholder remuneration" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/shareholder-remuneration" class="cmp-navigation__item-link">Shareholder remuneration</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/presence-in-indexes" title="Presence in indexes" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/presence-in-indexes" class="cmp-navigation__item-link">Presence in indexes</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/coverage" title="Coverage" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/coverage" class="cmp-navigation__item-link">Coverage</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/capital-transactions" title="Capital transactions" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/capital-transactions" class="cmp-navigation__item-link">Capital transactions</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/share-capital-distribution" title="Share capital distribution" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/share-capital-distribution" class="cmp-navigation__item-link">Share capital distribution</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/santander-share/consenso-de-analistas" title="Analysts consensus" aria-label="page-https://www.santander.com/en/shareholders-and-investors/santander-share/consenso-de-analistas" class="cmp-navigation__item-link">Analysts consensus</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information" title="Financial and economic information" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information" class="cmp-navigation__item-link">Financial and economic information</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/relevant-information" title="Relevant information" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/relevant-information" class="cmp-navigation__item-link">Relevant information</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/quarterly-results" title="Quarterly Results" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/quarterly-results" class="cmp-navigation__item-link">Quarterly Results</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/quarterly-shareholder-report" title="Quarterly Shareholder Report" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/quarterly-shareholder-report" class="cmp-navigation__item-link">Quarterly Shareholder Report</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/annual-report" title="Annual Report" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/annual-report" class="cmp-navigation__item-link">Annual Report</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/pillar-3-disclosures-report" title="Pillar 3 disclosures report" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/pillar-3-disclosures-report" class="cmp-navigation__item-link">Pillar 3 disclosures report</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/filings-with-other-regulatory-bodies" title="Filings with other regulatory bodies" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/filings-with-other-regulatory-bodies" class="cmp-navigation__item-link">Filings with other regulatory bodies</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/tlac-disclosure" title="TLAC Disclosure" aria-label="page-https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information/tlac-disclosure" class="cmp-navigation__item-link">TLAC Disclosure</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income" title="Fixed-Income" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income" class="cmp-navigation__item-link">Fixed-Income</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/fixed-income-presentations" title="Fixed-Income Presentations" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/fixed-income-presentations" class="cmp-navigation__item-link">Fixed-Income Presentations</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/ratings" title="Ratings" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/ratings" class="cmp-navigation__item-link">Ratings</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/debt-issuances" title="Debt Issuances" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/debt-issuances" class="cmp-navigation__item-link">Debt Issuances</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/programmes" title="Programmes" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/programmes" class="cmp-navigation__item-link">Programmes</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/securitisation" title="Securitisation" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/securitisation" class="cmp-navigation__item-link">Securitisation</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/issuance-companies-financial-statements" title="Issuance Companies Financial Statements" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/issuance-companies-financial-statements" class="cmp-navigation__item-link">Issuance Companies Financial Statements</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income/securities-registration-document" title="Securities Registration Document" aria-label="page-https://www.santander.com/en/shareholders-and-investors/fixed-income/securities-registration-document" class="cmp-navigation__item-link">Securities Registration Document</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-events" title="Corporate Events" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-events" class="cmp-navigation__item-link">Corporate Events</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-events/annual-general-meeting" title="Annual General Meeting" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-events/annual-general-meeting" class="cmp-navigation__item-link">Annual General Meeting</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-events/investor-day" title="Investor Day" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-events/investor-day" class="cmp-navigation__item-link">Investor Day</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-events/agenda" title="Agenda" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-events/agenda" class="cmp-navigation__item-link">Agenda</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information" title="General Information" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information" class="cmp-navigation__item-link">General Information</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/esg-presentation" title="ESG Presentation" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/esg-presentation" class="cmp-navigation__item-link">ESG Presentation</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/institutional-presentation" title="Institutional presentation" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/institutional-presentation" class="cmp-navigation__item-link">Institutional presentation</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/reports-about-climate" title="Reports about climate" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/reports-about-climate" class="cmp-navigation__item-link">Reports about climate</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/other-presentations" title="Other presentations" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/other-presentations" class="cmp-navigation__item-link">Other presentations</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/shareholders-contact" title="Shareholders Contact" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/shareholders-contact" class="cmp-navigation__item-link">Shareholders Contact</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/investors-contact" title="Investors Contact" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/investors-contact" class="cmp-navigation__item-link">Investors Contact</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/universal-registration-document" title="Universal Registration Document" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/universal-registration-document" class="cmp-navigation__item-link">Universal Registration Document</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/significant-equity-shareholdings-and-treasury-stock" title="Significant equity shareholdings and treasury stock" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/significant-equity-shareholdings-and-treasury-stock" class="cmp-navigation__item-link">Significant equity shareholdings and treasury stock</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/offer-to-acquire-outstanding-shares-and-adss-of-banco-santander-mexico-february-2023" title="Offer to acquire outstanding shares and ADSs of Banco Santander Mexico (February 2023)" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/offer-to-acquire-outstanding-shares-and-adss-of-banco-santander-mexico-february-2023" class="cmp-navigation__item-link">Offer to acquire outstanding shares and ADSs of Banco Santander Mexico (February 2023)</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/history-of-corporate-operations" title="History of Corporate Operations" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/history-of-corporate-operations" class="cmp-navigation__item-link">History of Corporate Operations</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/general-information/faqs" title="FAQs" aria-label="page-https://www.santander.com/en/shareholders-and-investors/general-information/faqs" class="cmp-navigation__item-link">FAQs</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance" title="Corporate governance" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance" class="cmp-navigation__item-link">Corporate governance</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/corporate-governance-presentation" title="Corporate Governance Deck" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/corporate-governance-presentation" class="cmp-navigation__item-link">Corporate Governance Deck</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/by-laws" title="Bylaws" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/by-laws" class="cmp-navigation__item-link">Bylaws</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/annual-report-on-corporate-governance" title="Annual report on corporate governance" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/annual-report-on-corporate-governance" class="cmp-navigation__item-link">Annual report on corporate governance</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/committees-reports" title="Committees&#39; reports" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/committees-reports" class="cmp-navigation__item-link">Committees&#39; reports</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/annual-report-on-directors-remuneration" title="Annual report on directors&#39; remuneration" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/annual-report-on-directors-remuneration" class="cmp-navigation__item-link">Annual report on directors&#39; remuneration</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/policy-on-communication-and-engagement-with-shareholders-and-investors" title="Policy on Communication and Engagement with Shareholders and Investors" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/policy-on-communication-and-engagement-with-shareholders-and-investors" class="cmp-navigation__item-link">Policy on Communication and Engagement with Shareholders and Investors</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/rules-and-regulations-of-the-board-of-directors" title="Rules and Regulations of the Board of Directors" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/rules-and-regulations-of-the-board-of-directors" class="cmp-navigation__item-link">Rules and Regulations of the Board of Directors</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/board-of-directors" title="Board of directors" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/board-of-directors" class="cmp-navigation__item-link">Board of directors</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/board-committees" title="Board committees" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/board-committees" class="cmp-navigation__item-link">Board committees</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/international-advisory-board" title="International advisory board" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/international-advisory-board" class="cmp-navigation__item-link">International advisory board</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/rules-and-regulations-for-the-general-shareholders-meeting" title="Rules and Regulations for the General Shareholders&#39; Meeting" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/rules-and-regulations-for-the-general-shareholders-meeting" class="cmp-navigation__item-link">Rules and Regulations for the General Shareholders&#39; Meeting</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-2 ">
+        
+    
+
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance/codes-of-conduct" title="Codes of conduct" aria-label="page-https://www.santander.com/en/shareholders-and-investors/corporate-governance/codes-of-conduct" class="cmp-navigation__item-link">Codes of conduct</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room" title="Press Room" aria-label="page-https://www.santander.com/en/press-room" class="cmp-navigation__item-link">Press Room</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/press-releases" title="Press releases" aria-label="page-https://www.santander.com/en/press-room/press-releases" class="cmp-navigation__item-link">Press releases</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/media-resources" title="Media resources" aria-label="page-https://www.santander.com/en/press-room/media-resources" class="cmp-navigation__item-link">Media resources</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/features" title="Features" aria-label="page-https://www.santander.com/en/press-room/features" class="cmp-navigation__item-link">Features</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/social-media" title="Social Media" aria-label="page-https://www.santander.com/en/press-room/social-media" class="cmp-navigation__item-link">Social Media</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/santander-international-banking-conference" title="Santander International Banking Conference" aria-label="page-https://www.santander.com/en/press-room/santander-international-banking-conference" class="cmp-navigation__item-link">Santander International Banking Conference</a>
+
+        
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/press-room/public-policy-and-research-centre" title="Public Policy &amp; Research Centre" aria-label="page-https://www.santander.com/en/press-room/public-policy-and-research-centre" class="cmp-navigation__item-link">Public Policy &amp; Research Centre</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-0 children-ul">
+        
+    
+
+    <a href="https://www.santander.com/en/careers" title="Careers" aria-label="page-https://www.santander.com/en/careers" class="cmp-navigation__item-link">Careers</a>
+
+        
+    <ul class="cmp-navigation__group">
+        
+
+    <li class="cmp-navigation__item cmp-navigation__item--level-1 ">
+        
+    
+
+    <a href="https://www.santander.com/en/careers/where-you-want-to-create-an-impact" title="Open oportunities" aria-label="page-https://www.santander.com/en/careers/where-you-want-to-create-an-impact" class="cmp-navigation__item-link">Open oportunities</a>
+
+        
+    </li>
+
+    </ul>
+
+    </li>
+
+    </ul>
+</nav>
+        </div>
+        <div class="pestana-level4"></div>
+        <div class="pestana-level2"></div>
+        <div class="pestana-level3"></div>
+    </div>
+    <div class="rrss-component">
+
+    
+        
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-rrss.lc-1205ba1c8b93b6ff11a9f5ab7c9286b2-lc.min.css" type="text/css">
+
+
+
+    
+
+    <div class="rrss-block">
+        <div class="container-page">
+            <div class="title-block">
+                Share
+            </div>
+
+            <div class="rrss--wrapper">
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-whatsapp-new"></span>
+                        <span class="rrss-item__title">Whatsapp</span>
+                    </div>
+                </div>
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-X"></span>
+                        <span class="rrss-item__title">X</span>
+                    </div>
+                </div>
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-facebook-rrss"></span>
+                        <span class="rrss-item__title">Facebook</span>
+                    </div>
+                </div>
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-Linkedin-new"></span>
+                        <span class="rrss-item__title">Linkedin</span>
+                    </div>
+                </div>
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-mail-rrss"></span>
+                        <span class="rrss-item__title">E-mail</span>
+                    </div>
+                </div>
+                <div class="rrss-item-container">
+                    <div class="rrss__item">
+                        <span class="icon icon-Link-new"></span>
+                        <span class="rrss-item__title">Copy URL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="copiedMsg">
+                <div class="rrss__item">
+                    <span class="icon icon-url-rrss"></span>
+                    <span class="rrss-item__title">URL copied to clipboard</span>
+                </div>
+
+                <div class="sb-button-container">
+                    <a class="sb-button button button__secondary" href="#">
+                        CLOSE (<span id="countdown">3</span><span class="lowerSecs">s</span>)</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+        
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-rrss.lc-f5ff9bb9e167f8eee773925a928d54c2-lc.min.js"></script>
+
+
+
+    
+
+</div>
+    
+
+    
+    
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title-custom title aem-GridColumn aem-GridColumn--default--12"><div class="container-page">
+    
+        
+        
+        
+        
+            <h2 class="title-block">Santander Share</h2>
+        
+    
+    
+    
+
+</div>
+</div>
+<div class="corporate-shares-complex aem-GridColumn aem-GridColumn--default--12"><div class="corporate-shares-complex-block">
+    
+        
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-corporate-shares-complex.lc-753d9950d93aa7ee89dd6eeb770e5bee-lc.min.css" type="text/css">
+
+
+
+    
+    
+    
+    <div class="corporate-shares-complejo">
+        <div class="container-page">
+            <div class="corporate-shares-complex-wrapper">
+                <a href="https://www.santander.com/en/shareholders-and-investors/santander-share" target="_self" data-jsonpath="https://tools.eurolandir.com/tools/pricefeed/Santander/?market=madrid&amp;language=en" data-path="/content/experience-fragments/santander_corporate/san-global/english/investor-toolbox/master/jcr:content/root/responsivegrid/corporate_shares_com" data-index="0">
+                    <span class="nombreCiu"></span>
+                    <span class="dinero"></span> 
+                    <span class="flecha "></span>
+                    <span class="porcentaje"></span> 
+                    <span class="hora"></span>
+                </a>
+<a href="https://www.santander.com/en/shareholders-and-investors/santander-share" target="_blank" data-jsonpath="https://tools.eurolandir.com/tools/pricefeed/Santander/?market=newyork&amp;language=en" data-path="/content/experience-fragments/santander_corporate/san-global/english/investor-toolbox/master/jcr:content/root/responsivegrid/corporate_shares_com" data-index="1">
+                    <span class="nombreCiu"></span>
+                    <span class="dinero"></span> 
+                    <span class="flecha "></span>
+                    <span class="porcentaje"></span> 
+                    <span class="hora"></span>
+                </a>
+<a href="https://www.santander.com/en/shareholders-and-investors/santander-share" target="_blank" data-jsonpath="https://tools.eurolandir.com/tools/pricefeed/Santander/?market=london&amp;language=en" data-path="/content/experience-fragments/santander_corporate/san-global/english/investor-toolbox/master/jcr:content/root/responsivegrid/corporate_shares_com" data-index="2">
+                    <span class="nombreCiu"></span>
+                    <span class="dinero"></span> 
+                    <span class="flecha "></span>
+                    <span class="porcentaje"></span> 
+                    <span class="hora"></span>
+                </a>
+<a href="https://www.santander.com/en/shareholders-and-investors/santander-share" target="_blank" data-jsonpath="https://tools.eurolandir.com/tools/pricefeed/Santander/?market=warsaw&amp;language=en" data-path="/content/experience-fragments/santander_corporate/san-global/english/investor-toolbox/master/jcr:content/root/responsivegrid/corporate_shares_com" data-index="3">
+                    <span class="nombreCiu"></span>
+                    <span class="dinero"></span> 
+                    <span class="flecha "></span>
+                    <span class="porcentaje"></span> 
+                    <span class="hora"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    
+        
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-corporate-shares-complex.lc-e73de3999f572b3dafb643b8c8096178-lc.min.js"></script>
+
+
+
+    
+</div></div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+
+
+    
+
+    
+    
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="parbase text aem-GridColumn aem-GridColumn--default--12"><input type="hidden" class="nameComponent" value="text-custom"/>
+<div class="dialogText d-none"></div>
+
+
+<div class="container-page text-custom-component">
+    <div class="cmp-text">
+        <p>
+            <em>This share prices have a 15 minute delay and are shown in the local time of the market in which the quote is displayed.</em>
+        </p>
+    </div>
+    
+</div></div>
+<div class="list-links aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-list-links.lc-5a2aa7fdb9c38dd7b810ad7d149229ca-lc.min.css" type="text/css">
+
+
+
+
+<!-- Listado de enlaces -->
+<div class="container-page">
+    <!-- Campos de analítica -->
+    <input type="hidden" class="nameComponent" value="list-links"/>
+    <div class="dialogText d-none"></div>
+    <!-- Campos de analítica -->
+    <div class="list-links-wrapper">
+        <div class="columnNumber" style="display:none !important;">2</div>
+        <div class="list-links">
+            
+
+    <ul class="">
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/santander-share" target="_self" class="">
+                <span class="">
+                    Santander Share
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/santander-share#shareholder-remuneration" target="_self" class="">
+                <span class="">
+                    Shareholder Remuneration
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information#quarterly-results" target="_self" class="">
+                <span class="">
+                    Quarterly Results
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information#quarterly-shareholder-report" target="_self" class="">
+                <span class="">
+                    Quarterly Shareholder Report
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information#relevant-information" target="_self" class="">
+                <span class="">
+                    Relevant Information
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information#pillar-iii-disclosures-report" target="_self" class="">
+                <span class="">
+                    Pillar III disclosures report
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/financial-and-economic-information#annual-report" target="_self" class="">
+                <span class="">
+                    Annual Report
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/fixed-income" target="_self" class="">
+                <span class="">
+                    Fixed-Income
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/corporate-events" target="_self" class="">
+                <span class="">
+                    Corporate Events
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance" target="_self" class="">
+                <span class="">
+                    Corporate Governance
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.santander.com/en/shareholders-and-investors/general-information" target="_self" class="">
+                <span class="">
+                    General Information
+                    <span class="icon icon-down"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+
+
+        </div>
+    </div>
+</div>
+<!-- Número de columnas del listado de enlaces -->
+<!--<span>Número de columnas2</span>-->
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-list-links.lc-026bf05c9c1e0196dc76e4f6958c104a-lc.min.js"></script>
+
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+
+
+    
+
+    
+    
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="list-links-highlighted aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-list-links-highlighted.lc-070eb4c628b6fd34757be79972cf3bf2-lc.min.css" type="text/css">
+
+
+
+
+
+<div class="container-page">
+    <div class="list-links-highlighted">
+        
+
+<div class="elemento-lista-links-destacados">
+    <a href="https://www.santander.com/en/shareholders-and-investors/information-for-shareholders-and-investors" target="_self" class="link-destacado">
+        <span class="icono-link-destacado">
+            Information for shareholders and investors
+            <span class="texto"></span>
+            <span class="icon"></span>
+        </span>
+    </a>
+</div>
+<div class="elemento-lista-links-destacados">
+    <a href="https://www.santander.com/en/shareholders-and-investors/corporate-governance-and-remuneration-policy" target="_self" class="link-destacado">
+        <span class="icono-link-destacado">
+            Corporate governance and remuneration policy
+            <span class="texto"></span>
+            <span class="icon"></span>
+        </span>
+    </a>
+</div>
+
+
+    
+
+
+    </div>
+</div>
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-list-links-highlighted.lc-e36c2fc80c9ecd42802625ff5cd0043c-lc.min.js"></script>
+
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+
+
+    <div class="window-close">
+    </div>
+</div>
+</div>
+</nav>
+
+    
+
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-navigation-menu.lc-4c2aec9b7852b89a08d922185076d92a-lc.min.js"></script>
+
+
+
+</div>
+<div class="insert-html aem-GridColumn aem-GridColumn--default--12">
+<div class="insert-html-component">
+    
+    <style>div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.navigation-menu-xf.experiencefragment.aem-GridColumn.aem-GridColumn--default--12 > div > div > div > div > div > div > div > div > div.menu-lateral.activate > div.menu-level2.active > div.block-level > nav > ul > li:nth-child(5) > ul > li:nth-child(5) { display: none }</style>
+    
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+</div>
+
+    
+    
+
+
+
+
+</div>
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="columns-component">
+    
+    
+    <div class="row   py- ">
+        
+            <div class="col-xs-12 col-sm-4 col-lg-4 order-md-1 per33 null py- ">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="image aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-image.lc-e7d4e287414b581cdb1ab855d62d2b36-lc.min.css" type="text/css">
+
+
+
+
+
+
+
+
+<div class="container-page">
+    <div class="container-image">
+        <div class="image-wrapper padding">
+            <picture>
+                
+                
+                
+                <source media="(min-width: 0px)" srcset="/content/dam/santander-com/es/contenido-paginas/landing-pages/error-404/im-error-404.png.transform/rendition-xs/image.png"/>
+                
+                
+                    <img src="/content/dam/santander-com/es/contenido-paginas/landing-pages/error-404/im-error-404.png" alt/>
+                
+            </picture>
+            <div class="image-caption empty-caption">
+                
+            </div>
+        </div>
+    </div>
+</div></div>
+
+    
+</div>
+</div>
+        
+            <div class="col-xs-12 col-sm-8 col-lg-8 order-md-2 per66 null py- ">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title-custom title aem-GridColumn aem-GridColumn--default--12"><div class="container-page">
+    
+        
+        
+        
+        
+            <h1 class="title-block">Sorry, the page you are looking for is not on the web.</h1>
+        
+    
+    
+    
+
+</div>
+</div>
+<div class="parbase text aem-GridColumn aem-GridColumn--default--12"><input type="hidden" class="nameComponent" value="text-custom"/>
+<div class="dialogText d-none"></div>
+
+
+<div class="container-page text-custom-component">
+    <div class="cmp-text">
+        <p>
+            <p>This may occur for two reasons:</p>
+<ul><li>You have entered an incorrect Internet address, or</li><li>The page has been eliminated or moved.</li></ul>
+
+        </p>
+    </div>
+    
+</div></div>
+<div class="list-links-highlighted aem-GridColumn aem-GridColumn--default--12">
+    
+    
+
+
+
+
+
+<div class="container-page">
+    <div class="list-links-highlighted">
+        
+
+<div class="elemento-lista-links-destacados">
+    <a href="https://www.santander.com/en/home" target="_self" class="link-destacado">
+        <span class="icono-link-destacado">
+            Go back to the homepage
+            <span class="texto"></span>
+            <span class="icon"></span>
+        </span>
+    </a>
+</div>
+
+
+    
+
+
+    </div>
+</div>
+
+    
+    
+
+
+
+
+</div>
+
+    
+</div>
+</div>
+        
+    </div>
+
+</div></div>
+
+    
+</div>
+</div>
+<div class="footer-xf experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+     
+    
+    <div class="xfpage page basicpage">
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="footer aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-footer.lc-95591a7b9743e75ec26556b8792d63dd-lc.min.css" type="text/css">
+
+
+
+
+
+<footer>
+    <input type="hidden" class="nameComponent" value="footer"/>
+    <div class="dialogText d-none"></div>
+    <div>
+        <div class="footer-links-wrapper">
+            <div class="container-page">
+                <div class="footer-links js-mobile-only-collapsible">
+                    
+
+
+
+
+    
+    
+    <div class="list-links-complex">
+<div class="footer-links__block">
+    <div class="footer-link__collapsible-header">
+        <div class="footer-link-collapsible-header__title">
+            Legal
+            <span class="icon icon-down"></span>
+        </div>
+        
+            <ul class="footer-link__collapsible-body">
+                <li>
+                    
+                    <a href="https://www.santander.com/en/landing-pages/legal-notice" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Legal Notice
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/landing-pages/cookies-policy" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Cookie Policy
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/landing-pages/data-protection-policy" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Data Protection Policy
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/landing-pages/accessibility" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Accessibility
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        
+    </div>
+</div>
+</div>
+
+
+    
+    
+    <div class="list-links-complex">
+<div class="footer-links__block">
+    <div class="footer-link__collapsible-header">
+        <div class="footer-link-collapsible-header__title">
+            Links of interest
+            <span class="icon icon-down"></span>
+        </div>
+        
+            <ul class="footer-link__collapsible-body">
+                <li>
+                    
+                    <a href="https://www.santander.com/en/press-room/features/results-santander" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Santander financial earnings
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/landing-pages/contact" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Contact us
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/press-room/social-media" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Social media profiles
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                    <a href="https://www.santander.com/en/about-us/financial-services" target="_self" class="footer-link-collapsible-body__url">
+                        <span class="footer-link-collapsible-body-url__title">
+                            Financial services
+                            <span class="icon icon-down"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        
+    </div>
+</div>
+</div>
+
+
+
+                </div>
+                <div class="footer-links js-mobile-only-collapsible">
+                    
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-logos-wrapper">
+            <div class="container-page">
+                
+
+    <div class="footer-logos__item">
+        <a href="https://www.spglobal.com/esg/performance/indices/" target="_blank" class="footer-logos-item__url">
+    	 <img src="/content/dam/santander-com/images/DJSI Emblem_All Black v2.jpg.transform/rendition-xs/image.jpg" alt="Dow Jones Sustainability Index" class="footer-logos-item-url__img"/>
+        </a>
+    </div>
+
+    <div class="footer-logos__item">
+        <a href="https://www.ftserussell.com/products/indices/ftse4good" target="_blank" class="footer-logos-item__url">
+    	 <img src="/content/dam/santander-com/images/descarga.jpeg.transform/rendition-xs/image.jpeg" alt="FTSE4Good" class="footer-logos-item-url__img"/>
+        </a>
+    </div>
+
+    <div class="footer-logos__item">
+        <a href="https://www.unglobalcompact.org/" target="_blank" class="footer-logos-item__url">
+    	 <img src="/content/dam/santander-com/images/UN-global-compact.jpg.transform/rendition-xs/image.jpg" alt="United Nations Global Compact" class="footer-logos-item-url__img"/>
+        </a>
+    </div>
+
+    <div class="footer-logos__item">
+        <a href="https://www.unepfi.org/banking/bankingprinciples/" target="_blank" class="footer-logos-item__url">
+    	 <img src="/content/dam/santander-com/images/262_263_156_Founding-Signatory-Stamp_Colour.jpg.transform/rendition-xs/image.jpg" alt="United Nations Environment Programme - Finance Initiative" class="footer-logos-item-url__img"/>
+        </a>
+    </div>
+
+
+            </div>
+        </div>
+        <div class="footer-copyright-wrapper">
+            <div class="container-page">
+                <div class="footer-copyright-container">
+                    <div class="footer-copyright__logo">
+                        
+
+
+
+
+
+  <a href="https://www.santander.com/en/home" class="footer-copyrigth-logo__url">
+    <img src="/content/dam/santander-com/images/Santander_Logo.svg" alt="Santander Corporate Web" class="footer-copyright-logo__img"/>
+  </a>
+
+
+                    </div>
+                    <div class="footer-copyright__text">
+                        <div class="cmp-text">
+    <p>© Banco Santander S.A. All rights reserved. Corporate Headquarters: CGS Av. Cantabria s/n 28660 Boadilla del Monte, Madrid (Spain)</p>
+
+</div>
+
+    
+
+
+                    </div>
+                    <div class="footer-copyright__rrss">
+                        <div class="footer-copyright-rrss--center">
+                            
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://x.com/bancosantander" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s X account (Opens in a new window)">
+            <span class="icon icon-X">
+                <span class="text-acce">X</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://www.linkedin.com/company/banco-santander" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s Linkedin account (Opens in a new window)">
+            <span class="icon icon-Linkedin-new">
+                <span class="text-acce">Linkedin</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://www.facebook.com/santanderglobal" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s Facebook account (Opens in a new window)">
+            <span class="icon icon-Facebook-new">
+                <span class="text-acce">Facebook</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://www.instagram.com/santander.global/" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s Instagram account (Opens in a new window)">
+            <span class="icon icon-instagram-new">
+                <span class="text-acce">Instagram</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://www.youtube.com/user/SantanderGroup" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s YouTube account (Opens in a new window)">
+            <span class="icon icon-youtube-new">
+                <span class="text-acce">YouTube</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="footer-copyright-rrss__item">
+        <a href="https://news.google.com/publications/CAAqBwgKMKKhnAswtqu0Aw" target="_blank" class="footer-copyright-rrss-item__url" aria-label="Visit Grupo Santander&#39;s Google News account (Opens in a new window)">
+            <span class="icon icon-google-news">
+                <span class="text-acce">Google News</span>
+            </span>
+        </a>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-footer.lc-0702f075d627dbb171b2b6f6526970db-lc.min.js"></script>
+
+
+
+
+</div>
+<div class="insert-html aem-GridColumn aem-GridColumn--default--12">
+<div class="insert-html-component">
+    
+    <style>.footer-logos-wrapper {display:none!important}</style>
+    
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+</div>
+
+    
+    
+
+
+
+
+</div>
+<div class="language-alert-xf experiencefragment aem-GridColumn aem-GridColumn--default--12">
+	<div>
+	    
+	    <div class="xfpage page basicpage">
+
+    
+
+
+
+<div class="xf-content-height">
+    <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="language-alert aem-GridColumn aem-GridColumn--default--12">
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-language-alert.lc-24be75b1a5c9387826240b371cbb13d9-lc.min.css" type="text/css">
+
+
+
+
+<section class="cookie-component " data-path="/content/experience-fragments/santander_corporate/san-global/english/language-alert---en/master/jcr:content/root/responsivegrid/language_alert">
+	<div>
+    
+    
+
+
+
+
+
+<input type="hidden" class="nameComponent" value="alert"/>
+
+<div class="modal modal-language" id="modal-language" tabindex="-1" role="dialog" aria-labelledby="modal-language" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="languageTitle" class="modal-body__title" data-title="Lo sentimos, la página que buscas no está disponible en el idioma seleccionado" style="display: none;"></div>
+                <div id="languageSubtitle" class="modal-body__subtitle" data-subtitle="<p>Lamentablemente, no podemos ofrecerte este contenido en el idioma seleccionado. Si lo prefieres, puedes seguir consultando esta información en el idioma disponible, o por el contrario, ir a la página de inicio.</p>
+" style="display: none;"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer__container">
+                    <div class="modal-footer-container__buttonLeft">
+                        <button class="button button__principal">Aceptar y seguir navegando</button>
+                    </div>
+                    <div class="modal-footer-container__buttonRight">
+                        <button class="button button__secondary">Ir a la página de inicio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+
+
+
+</div>
+</section>
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-components/clientlib-language-alert.lc-105269af4e6a2cee301b7fab5b883f0b-lc.min.js"></script>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+</div>
+</div>
+
+	    
+    
+
+
+
+     </div>
+
+</div>
+
+    
+</div>
+</div>
+
+<script type="text/javascript">var utag_data = {}</script>
+<script type="text/javascript">!function(e,t,n,a){null!=(e="https://tags.tiqcdn.com/utag/santander/corporate-main-aem/prod/utag.js")&&"undefined"!=e&&""!=e||(anlitycResponse="error"),n="script",(a=(t=document).createElement(n)).src=e,a.type="text/java"+n,a.async=!0,(e=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,e)}();</script>
+
+            
+    
+    
+    
+    
+<script src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-base.lc-2d95c6eed5e884fe967a1891284d09ab-lc.min.js"></script>
+
+
+
+
+
+    
+    
+<script src="/etc.clientlibs/santander-corporate/clientlibs/clientlib-site.lc-3900db392341d526bc32631ebe9a30f2-lc.min.js"></script>
+
+
+
+
+
+    
+
+    
+
+    
+    
+<script src="/etc.clientlibs/core/wcm/components/commons/datalayer/v1/clientlibs/core.wcm.components.commons.datalayer.v1.lc-70264651675213ed7f7cc5a02a00f621-lc.min.js"></script>
+
+
+
+    
+    
+
+            
+
+        
+    </body>
+</html>
