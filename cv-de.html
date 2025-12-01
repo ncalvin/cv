@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Newton Luiz Calvin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            color: #000;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .skills-category {
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .download-hint {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-print {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print download-hint">
+        <strong>Lebenslauf-Vorschau</strong><br>
+        Als PDF speichern: Drücken Sie <button class="btn-print" onclick="window.print()">Als PDF speichern</button>
+        oder
+        verwenden Sie Strg+P (Cmd+P auf Mac).
+    </div>
+
+    <div class="header">
+        <h1>NEWTON LUIZ CALVIN</h1>
+        <div class="subtitle">Tech Lead | Salesforce Spezialist | Tech Manager</div>
+        <div class="contact-info">
+            Porto Alegre, RS | <a href="mailto:newton.calvin@gmail.com">newton.calvin@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/newtoncalvin" target="_blank"
+                rel="noopener noreferrer">linkedin.com/in/newtoncalvin</a>
+        </div>
+    </div>
+
+    <h2>BERUFLICHE ZUSAMMENFASSUNG</h2>
+    <p>
+        Als erfahrener <strong>Tech Lead</strong> kombiniere ich technisches Fachwissen im
+        <strong>Salesforce</strong>-Ökosystem mit einer strategischen Geschäftsvision. Meine Erfolgsbilanz ist geprägt
+        durch die Bereitstellung skalierbarer Lösungen und die Fähigkeit, komplexe Anforderungen in effiziente
+        Architekturen zu übersetzen. Ich leite multidisziplinäre Teams und fördere eine Kultur technischer Exzellenz,
+        Innovation und kontinuierlicher Bereitstellung. Mein Fokus liegt darauf, Unternehmen und Startups dabei zu
+        helfen, ihre technologischen Prozesse zu optimieren und neue Effizienzniveaus zu erreichen.
+    </p>
+
+    <h2>TECHNISCHE FÄHIGKEITEN</h2>
+    <ul>
+        <li><span class="skills-category">Salesforce-Ökosystem:</span> Sales Cloud, Service Cloud, Field Service,
+            Experience Cloud, CPQ, Agentforce, Apex, LWC, SOQL/SOSL.</li>
+        <li><span class="skills-category">Cloud & DevOps:</span> AWS, Azure, Docker, Kubernetes, GitLab CI, Jenkins,
+            Ansible, Terraform.</li>
+        <li><span class="skills-category">Entwicklung & Daten:</span> Node.js (Express, NestJS), Python (Django,
+            FastAPI), Databricks (Spark, Delta Lake), SQL.</li>
+        <li><span class="skills-category">Sicherheit & Compliance:</span> Fortify, ForgeRock, OWASP, PCI-DSS, SOC 2.
+        </li>
+        <li><span class="skills-category">Management & Methoden:</span> Agile, Scrum, SAFe, Technische Führung,
+            Team-Mentoring, Strategische Planung.</li>
+    </ul>
+
+    <h2>BERUFSERFAHRUNG</h2>
+
+    <div class="job">
+        <div class="job-header">
+            <span>GETNET</span>
+            <span>Porto Alegre, RS</span>
+        </div>
+        <div class="job-title">Salesforce Tech Lead | Januar 2025 - Heute</div>
+        <ul>
+            <li>Als Tech Lead leite ich die strategische Migration von Salesforce-Orgs und stelle Datenintegrität und
+                Geschäftskontinuität sicher.</li>
+            <li>Definition der Architektur skalierbarer Lösungen in Sales Cloud und Service Cloud, ausgerichtet auf die
+                Wachstumsziele des Unternehmens.</li>
+            <li>Verwaltung technischer Schulden und Implementierung von CI/CD- und DevOps-Best Practices zur
+                Beschleunigung des Entwicklungszyklus.</li>
+            <li>Mentoring von Entwicklern und Analysten, Erhöhung des technischen Niveaus des Teams und Förderung einer
+                Kultur der Exzellenz.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span>PAGONXT (A SANTANDER COMPANY)</span>
+            <span>Porto Alegre, RS</span>
+        </div>
+        <div class="job-title">Salesforce Berater & Lösungsarchitekt | Oktober 2022 - Oktober 2024</div>
+        <ul>
+            <li>Tätig als Salesforce Berater, Verwaltung und Zusammenarbeit mit multidisziplinären Teams in globalen
+                Zahlungs- und CRM-Projekten.</li>
+            <li>Zusammenarbeit bei Datenarchitektur und Integration mit Databricks und Salesforce.</li>
+            <li>Implementierung von IT-Governance-Prozessen, die die Vorhersehbarkeit und Lieferqualität erhöhten.</li>
+            <li>Zusammenarbeit mit internationalen Stakeholdern in Mexiko und Chile zur Abstimmung von
+                Geschäftsanforderungen und technischen Lösungen.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span>IBM IX</span>
+            <span>Remote</span>
+        </div>
+        <div class="job-title">Senior Salesforce Berater | September 2021 - Oktober 2022</div>
+        <ul>
+            <li>Entwicklung maßgeschneiderter Lösungen in Salesforce Service Cloud und Field Service mit Fokus auf
+                Benutzererfahrung und Leistung.</li>
+            <li>Arbeit an der Lösung komplexer Integrationsprobleme zur Sicherstellung der Stabilität des
+                CRM-Ökosystems.</li>
+            <li>Optimierung von Kundenserviceprozessen, Reduzierung der Ticket-Lösungszeit.</li>
+            <li>Lieferung leistungsstarker und wiederverwendbarer LWC-Komponenten.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span>T-SYSTEMS INTERNATIONAL</span>
+            <span>Blumenau, SC / Deutschland</span>
+        </div>
+        <div class="job-title">Product Owner / Salesforce Spezialist | Juni 2019 - September 2021</div>
+        <ul>
+            <li>Tätig als Salesforce Berater in CRM-Projekten für die Deutsche Telekom in Deutschland.</li>
+            <li>Implementierung robuster Lösungen mit Fokus auf digitale Transformation und Sicherheit.</li>
+            <li>Leitung von Initiativen als DevOps Product Owner, SAP / Node.js / Python & Salesforce.</li>
+        </ul>
+    </div>
+
+    <h2>AUSBILDUNG UND ZERTIFIZIERUNGEN</h2>
+    <ul>
+        <li><strong>Data Science Professional Certificate</strong> | KNIME / LinkedIn Learning (2025)</li>
+        <li><strong>Building AI Products: Security Essentials</strong> | LinkedIn Learning (2025)</li>
+        <li><strong>Docker Foundations Professional Certificate</strong> | LinkedIn Learning (2025)</li>
+        <li><strong>Salesforce Agentforce Specialist</strong> | Salesforce (2024)</li>
+        <li><strong>Effective Customer Communication</strong> | Santander (2024)</li>
+        <li><strong>Salesforce Platform Certification</strong> | Salesforce (2024)</li>
+        <li><strong>Salesforce Ranger (500+ Badges)</strong> | Salesforce Trailhead (2024)</li>
+        <li><strong>Leading in Agile</strong> | Santander (2023)</li>
+        <li><strong>Digital Transformation for Tech Leaders</strong> | LinkedIn Learning (2022)</li>
+        <li><strong>Applying Lean, DevOps, and Agile</strong> | LinkedIn Learning (2022)</li>
+        <li><strong>Develop Your Skills as a Software Project Manager</strong> | LinkedIn Learning (2022)</li>
+        <li><strong>Getting Started as an Agile Project Manager</strong> | LinkedIn Learning (2022)</li>
+        <li><strong>IBM Virtual Collaborator</strong> | IBM (2022)</li>
+        <li><strong>Agile Enterprise Architecture</strong> | IBM (2022)</li>
+        <li><strong>IBM CLM® for SAFe® - Level 1</strong> | IBM (2022)</li>
+        <li><strong>Enterprise Design Thinking Practitioner</strong> | IBM (2021)</li>
+    </ul>
+
+    <h2>SPRACHEN</h2>
+    <ul>
+        <li><strong>Portugiesisch:</strong> Muttersprache</li>
+        <li><strong>Englisch:</strong> Fortgeschritten (Internationale Erfahrung und globale Projekte)</li>
+        <li><strong>Spanisch:</strong> Fortgeschritten (Projekte in Lateinamerika)</li>
+        <li><strong>Deutsch:</strong> Mittelstufe (Erfahrung in Deutschland)</li>
+    </ul>
+
+</body>
+
+</html>
