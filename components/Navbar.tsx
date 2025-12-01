@@ -186,7 +186,7 @@ const Navbar: React.FC = () => {
             pointerEvents: 'auto',
             width: '100%',
             maxWidth: '1000px',
-            padding: '0.5rem 0.75rem 0.5rem 1.5rem',
+            padding: '0.5rem 1rem',
             backgroundColor: isScrolled
               ? (theme === 'light' ? 'rgba(255, 255, 255, 0.85)' : 'rgba(15, 23, 42, 0.85)')
               : (theme === 'light' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(15, 23, 42, 0.5)'),
@@ -205,9 +205,6 @@ const Navbar: React.FC = () => {
           }}
         >
           {/* Logo Section - Removed as per request */}
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            {/* Empty div to maintain layout spacing if needed, or can be removed entirely if justify-content handles it */}
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center" role="navigation" aria-label="Main Navigation">
