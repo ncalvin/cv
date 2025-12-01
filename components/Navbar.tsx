@@ -124,8 +124,11 @@ const Navbar: React.FC = () => {
         className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}
       >
         <div className={`navbar-container ${isScrolled ? 'scrolled' : ''}`}>
-          {/* Language Selector - Left Aligned */}
-          <LanguageSelector align="left" />
+          {/* Left Actions Group: Language & Theme */}
+          <div className="flex items-center gap-2">
+            <LanguageSelector align="left" />
+            <ThemeToggle />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center" role="navigation" aria-label="Main Navigation">
@@ -143,15 +146,12 @@ const Navbar: React.FC = () => {
                 />
               ))}
             </div>
-
-            <div className="nav-actions-container">
-              <ThemeToggle />
-            </div>
+            {/* ThemeToggle removed from here as it's now on the left */}
           </nav>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
+            {/* ThemeToggle removed from here as it's now on the left */}
             <ActionButton
               onClick={() => setIsOpen(!isOpen)}
               label={isOpen ? "Close menu" : "Open menu"}
