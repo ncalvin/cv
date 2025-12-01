@@ -161,6 +161,28 @@ newton-calvin-cv/
 - Serif: Georgia, Times New Roman
 - Escala: clamp() para responsividade fluida
 
+- Escala: clamp() para responsividade fluida
+
+---
+
+## 📊 Google Analytics (GA4)
+
+O projeto inclui integração com Google Analytics 4, respeitando a privacidade do usuário (Consent Mode).
+
+### Configuração
+
+1.  Crie uma propriedade no GA4 e obtenha o **Measurement ID** (ex: `G-XXXXXXXXXX`).
+2.  Adicione o ID no arquivo `.env` (crie se não existir):
+    ```env
+    VITE_GA_MEASUREMENT_ID=G-SEU-ID-AQUI
+    ```
+    Ou edite diretamente em `src/components/GoogleAnalytics.tsx` (não recomendado para produção).
+
+### Funcionalidades
+- **Carregamento Condicional**: O script do GA4 só é injetado após o usuário clicar em "Aceitar" no banner de consentimento.
+- **Anonimização de IP**: Configurado por padrão (`anonymize_ip: true`).
+- **Rastreamento de SPA**: Dispara eventos `page_view` automaticamente nas trocas de rota.
+
 ---
 
 ## ✅ Checklist de Implementação
@@ -187,7 +209,7 @@ newton-calvin-cv/
 ## 🎯 Próximos Passos
 
 1. **Geração de PDF**: Implementar download real do CV em PDF
-2. **Analytics**: Adicionar Google Analytics ou similar
+2. **Analytics**: Adicionar Google Analytics ou similar (Implementado: GA4 com consentimento)
 3. **i18n**: Suporte multi-idioma (PT/EN)
 4. **CMS**: Integração com Headless CMS para conteúdo dinâmico
 5. **Blog**: Seção de artigos técnicos

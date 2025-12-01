@@ -387,5 +387,10 @@ export const es = {
         'courses.items.cert-design-thinking.institution': 'IBM',
         'courses.items.cert-design-thinking.summary': 'Practicante de Design Thinking enfocado en soluciones empresariales centradas en el usuario.',
         'courses.items.cert-design-thinking.bullets': ['Diseño Centrado en el Usuario', 'Mapas de Empatía', 'Ideación', 'Prototipado'],
+
+        // Cookie Consent
+        'cookieConsent.text': 'Utilizamos cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de privacidad.',
+        'cookieConsent.accept': 'Aceptar',
+        'cookieConsent.close': 'Cerrar',
     }
 };

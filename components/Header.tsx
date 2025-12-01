@@ -37,17 +37,18 @@ const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
 };
 
 import { useLanguage } from '../contexts/LanguageContext';
+import { generatePDF } from '../src/utils/pdfGenerator';
 
 const Header: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isDownloading, setIsDownloading] = useState(false);
 
   const handleDownloadCV = () => {
     setIsDownloading(true);
-    setTimeout(() => {
-      window.open('/cv.html', '_blank');
+
+    generatePDF(language).then(() => {
       setIsDownloading(false);
-    }, 800);
+    });
   };
 
   useEffect(() => {

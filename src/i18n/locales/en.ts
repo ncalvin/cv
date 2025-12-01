@@ -389,5 +389,10 @@ export const en = {
         'courses.items.cert-design-thinking.institution': 'IBM',
         'courses.items.cert-design-thinking.summary': 'Design Thinking practitioner focused on user-centered enterprise solutions.',
         'courses.items.cert-design-thinking.bullets': ['User-Centered Design', 'Empathy Maps', 'Ideation', 'Prototyping'],
+
+        // Cookie Consent
+        'cookieConsent.text': 'We use cookies to improve your experience. By continuing to browse, you agree to our privacy policy.',
+        'cookieConsent.accept': 'Accept',
+        'cookieConsent.close': 'Close',
     }
 };

@@ -15,6 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollGuide from './components/ScrollGuide';
 import SEO from './components/SEO';
+import { GoogleAnalytics } from './components/GoogleAnalytics';
 import './src/i18n/config';
 
 // Wrapper to handle language based on route
@@ -88,6 +89,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <LanguageProvider>
           <ThemeProvider>
+            <GoogleAnalytics />
             <AppContent />
           </ThemeProvider>
         </LanguageProvider>

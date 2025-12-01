@@ -218,8 +218,8 @@ body {
 
   /* Glassmorphism - Floating Pill */
   background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
 
   border-radius: 100px;
   /* Pill shape */
@@ -1653,6 +1653,7 @@ a:focus-visible {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 1001;
 }
@@ -1674,6 +1675,7 @@ a:focus-visible {
 
 [data-theme="dark"] .mobile-menu-drawer {
   background-color: rgba(20, 20, 20, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 
@@ -1712,4 +1714,73 @@ a:focus-visible {
 .mobile-menu-link:hover {
   background-color: var(--color-bg-tertiary);
   color: var(--color-primary);
+}
+
+/* Cookie Consent Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  max-width: 300px;
+  font-size: 14px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.cookie-text {
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-btn-accept {
+  padding: 6px 12px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.cookie-btn-accept:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.cookie-btn-close {
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 1px solid var(--color-text-secondary);
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cookie-btn-close:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

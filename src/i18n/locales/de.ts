@@ -387,5 +387,10 @@ export const de = {
         'courses.items.cert-design-thinking.institution': 'IBM',
         'courses.items.cert-design-thinking.summary': 'Design Thinking Praktiker mit Fokus auf benutzerzentrierte Unternehmenslösungen.',
         'courses.items.cert-design-thinking.bullets': ['Benutzerzentriertes Design', 'Empathy Maps', 'Ideenfindung', 'Prototyping'],
+
+        // Cookie Consent
+        'cookieConsent.text': 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung der Website stimmen Sie unserer Datenschutzrichtlinie zu.',
+        'cookieConsent.accept': 'Akzeptieren',
+        'cookieConsent.close': 'Schließen',
     }
 };

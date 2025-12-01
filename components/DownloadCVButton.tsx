@@ -35,17 +35,26 @@ interface DownloadCVButtonProps {
     onClick?: () => void;
 }
 
+import { useLanguage } from '../contexts/LanguageContext';
+import { generatePDF } from '../src/utils/pdfGenerator';
+
+// ... (keep existing imports)
+
 const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
     variant = 'primary',
-    label = 'Baixar CV',
+    label, // Remove default here, handle inside
     fileName = 'Newton_Calvin_Tech_Lead_2025.pdf',
-    fileUrl = '/cv.html',
+    fileUrl, // Remove default here
     className = '',
     style,
     onClick
 }) => {
+    const { t, language } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
     const [showToast, setShowToast] = useState(false);
+
+    // Default label if not provided
+    const buttonLabel = label || t('header.cta.download');
 
     const handleDownload = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -61,19 +70,13 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
             value: 'PDF_HTML_View'
         });
 
-        // Simulate preparation delay for UX
-        setTimeout(() => {
+        // Use the new PDF generator
+        generatePDF(language).then(() => {
             setIsLoading(false);
             setShowToast(true);
-
-            // Open CV
-            window.open(fileUrl, '_blank');
-
-            // Hide toast after 3s
             setTimeout(() => setShowToast(false), 3000);
-
             if (onClick) onClick();
-        }, 800);
+        });
     };
 
     // Determine classes
@@ -105,7 +108,7 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
                 )}
 
                 {variant !== 'icon' && variant !== 'fab' && (
-                    <span>{isLoading ? 'Preparando...' : label}</span>
+                    <span>{isLoading ? 'Preparando...' : buttonLabel}</span>
                 )}
             </button>
 
