@@ -17,7 +17,12 @@ const GlobeIcon = () => (
     </svg>
 );
 
-const LanguageSelector: React.FC = () => {
+interface LanguageSelectorProps {
+    direction?: 'up' | 'down';
+    align?: 'left' | 'right';
+}
+
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ direction = 'down', align = 'right' }) => {
     const { language } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -58,11 +63,17 @@ const LanguageSelector: React.FC = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -10 }}
+                        initial={{ opacity: 0, y: direction === 'up' ? 10 : -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
+                        exit={{ opacity: 0, y: direction === 'up' ? 10 : -10 }}
                         transition={{ duration: 0.2 }}
                         className="language-dropdown"
+                        style={{
+                            top: direction === 'down' ? 'calc(100% + 0.5rem)' : 'auto',
+                            bottom: direction === 'up' ? 'calc(100% + 0.5rem)' : 'auto',
+                            right: align === 'right' ? 0 : 'auto',
+                            left: align === 'left' ? 0 : 'auto',
+                        }}
                     >
                         {languages.map((lang) => (
                             <button
