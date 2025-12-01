@@ -36,7 +36,10 @@ const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
   );
 };
 
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Header: React.FC = () => {
+  const { t } = useLanguage();
   const [isDownloading, setIsDownloading] = useState(false);
 
   const handleDownloadCV = () => {
@@ -97,12 +100,12 @@ const Header: React.FC = () => {
 
             <div style={styles.subtitleWrapper} className="animate-on-scroll">
               <p style={styles.subtitle}>
-                Tech Lead & Especialista Salesforce
+                {t('header.subtitle.1')} & {t('header.subtitle.2')}
               </p>
             </div>
 
             <p style={styles.description} className="animate-on-scroll">
-              Impulsionando a transformação digital através de liderança técnica estratégica. Atuo como <strong>Tech Lead</strong> focado em arquitetura de soluções robustas e gestão de equipes de alta performance para maximizar resultados de negócios.
+              {t('header.description')}
             </p>
 
 
@@ -128,7 +131,7 @@ const Header: React.FC = () => {
                 ) : (
                   <DownloadIcon style={styles.iconDownload} />
                 )}
-                <span style={{ marginLeft: '0.5rem' }}>{isDownloading ? 'Abrindo...' : 'Baixar CV'}</span>
+                <span style={{ marginLeft: '0.5rem' }}>{isDownloading ? '...' : t('header.cta.download')}</span>
               </button>
             </div>
 
@@ -160,18 +163,18 @@ const Header: React.FC = () => {
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                Role para saber mais
+                {t('header.scroll')}
               </motion.span>
             </motion.div>
           </div>
 
           {/* Quick Stats */}
           <div style={styles.statsContainer} className="animate-on-scroll">
-            <AnimatedStat value={10} label="Anos de Experiência" />
+            <AnimatedStat value={10} label={t('header.stats.years')} />
             <div style={styles.statDivider} aria-hidden="true"></div>
-            <AnimatedStat value={8} label="Projetos Concluídos" />
+            <AnimatedStat value={8} label={t('header.stats.projects')} />
             <div style={styles.statDivider} aria-hidden="true"></div>
-            <AnimatedStat value={15} label="Expertise em DevOps & CRM" />
+            <AnimatedStat value={15} label={t('header.stats.technologies')} />
           </div>
         </div>
       </div>

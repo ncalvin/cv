@@ -1,36 +1,154 @@
 import React, { useState } from 'react';
 import Section from './Section';
-import { experienceData } from '../data/experienceData';
+import { useLanguage } from '../contexts/LanguageContext';
+import type { ExperienceItem } from '../types';
 
 const Experience: React.FC = () => {
+  const { t } = useLanguage();
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+
+  const experienceData: ExperienceItem[] = [
+    {
+      company: 'Getnet',
+      role: t('experience.getnet.role'),
+      period: t('experience.getnet.period'),
+      location: t('experience.getnet.location'),
+      summary: t('experience.getnet.summary'),
+      description: [
+        t('experience.getnet.description.0'),
+        t('experience.getnet.description.1'),
+        t('experience.getnet.description.2'),
+        t('experience.getnet.description.3'),
+      ],
+      results: [
+        t('experience.getnet.result.0'),
+        t('experience.getnet.result.1'),
+      ],
+      skills: [
+        t('experience.getnet.skills.0'),
+        t('experience.getnet.skills.1'),
+        t('experience.getnet.skills.2'),
+        t('experience.getnet.skills.3'),
+        t('experience.getnet.skills.4'),
+        t('experience.getnet.skills.5'),
+      ],
+      link: 'https://www.getnet.com.br'
+    },
+    {
+      company: 'PagoNxt (a Santander company)',
+      role: t('experience.pagonxt.role'),
+      period: t('experience.pagonxt.period'),
+      location: t('experience.pagonxt.location'),
+      summary: t('experience.pagonxt.summary'),
+      description: [
+        t('experience.pagonxt.description.0'),
+        t('experience.pagonxt.description.1'),
+        t('experience.pagonxt.description.2'),
+        t('experience.pagonxt.description.3'),
+      ],
+      results: [
+        t('experience.pagonxt.result.0'),
+        t('experience.pagonxt.result.1'),
+      ],
+      skills: [
+        t('experience.pagonxt.skills.0'),
+        t('experience.pagonxt.skills.1'),
+        t('experience.pagonxt.skills.2'),
+        t('experience.pagonxt.skills.3'),
+        t('experience.pagonxt.skills.4'),
+      ],
+      link: 'https://www.pagonxt.com'
+    },
+    {
+      company: 'IBM IX',
+      role: t('experience.ibmix.role'),
+      period: t('experience.ibmix.period'),
+      location: t('experience.ibmix.location'),
+      summary: t('experience.ibmix.summary'),
+      description: [
+        t('experience.ibmix.description.0'),
+        t('experience.ibmix.description.1'),
+        t('experience.ibmix.description.2'),
+      ],
+      results: [
+        t('experience.ibmix.result.0'),
+        t('experience.ibmix.result.1'),
+      ],
+      skills: [
+        t('experience.ibmix.skills.0'),
+        t('experience.ibmix.skills.1'),
+        t('experience.ibmix.skills.2'),
+        t('experience.ibmix.skills.3'),
+        t('experience.ibmix.skills.4'),
+      ],
+      link: 'https://www.ibm.com/ibmix'
+    },
+    {
+      company: 'T-Systems International',
+      role: t('experience.tsystems.role'),
+      period: t('experience.tsystems.period'),
+      location: t('experience.tsystems.location'),
+      summary: t('experience.tsystems.summary'),
+      description: [
+        t('experience.tsystems.description.0'),
+        t('experience.tsystems.description.1'),
+        t('experience.tsystems.description.2'),
+      ],
+      results: [
+        t('experience.tsystems.result.0'),
+        t('experience.tsystems.result.1'),
+      ],
+      skills: [
+        t('experience.tsystems.skills.0'),
+        t('experience.tsystems.skills.1'),
+        t('experience.tsystems.skills.2'),
+        t('experience.tsystems.skills.3'),
+        t('experience.tsystems.skills.4'),
+        t('experience.tsystems.skills.5'),
+      ],
+      link: 'https://www.t-systems.com'
+    }
+  ];
 
   const toggleExpand = (index: number) => {
     setExpandedId(expandedId === index ? null : index);
   };
 
   const formatDate = (period: string) => {
-    // Extract start date (assumes format "Month de Year - ...")
-    const parts = period.split(' - ')[0].split(' ');
-    if (parts.length >= 3) {
-      const month = parts[0].toLowerCase();
-      const year = parts[2];
+    // Extract start date
+    const startDateStr = period.split(' - ')[0];
+    const parts = startDateStr.split(' ');
 
-      const monthMap: { [key: string]: string } = {
-        'janeiro': 'Jan', 'fevereiro': 'Fev', 'março': 'Mar', 'abril': 'Abr',
-        'maio': 'Mai', 'junho': 'Jun', 'julho': 'Jul', 'agosto': 'Ago',
-        'setembro': 'Set', 'outubro': 'Out', 'novembro': 'Nov', 'dezembro': 'Dez'
-      };
+    let month = '';
+    let year = '';
 
-      const shortMonth = monthMap[month] || month.substring(0, 3);
-      return { month: shortMonth, year };
+    if (parts.length === 3) { // PT: Month de Year
+      month = parts[0].toLowerCase();
+      year = parts[2];
+    } else if (parts.length === 2) { // EN: Month Year
+      month = parts[0].toLowerCase();
+      year = parts[1];
+    } else {
+      return { month: '', year: '' };
     }
-    return { month: '', year: '' };
+
+    const monthMap: { [key: string]: string } = {
+      'janeiro': 'Jan', 'fevereiro': 'Fev', 'março': 'Mar', 'abril': 'Abr',
+      'maio': 'Mai', 'junho': 'Jun', 'julho': 'Jul', 'agosto': 'Ago',
+      'setembro': 'Set', 'outubro': 'Out', 'novembro': 'Nov', 'dezembro': 'Dez',
+      // English
+      'january': 'Jan', 'february': 'Feb', 'march': 'Mar', 'april': 'Apr',
+      'may': 'May', 'june': 'Jun', 'july': 'Jul', 'august': 'Aug',
+      'september': 'Sep', 'october': 'Oct', 'november': 'Nov', 'december': 'Dec'
+    };
+
+    const shortMonth = monthMap[month] || month.substring(0, 3);
+    return { month: shortMonth, year };
   };
 
   return (
-    <Section id="experience" title="Experiência Profissional">
+    <Section id="experience" title={t('experience.title')}>
       <div className="timeline-container animate-on-scroll is-visible">
         {experienceData.map((item, index) => {
           const isExpanded = expandedId === index;
@@ -55,48 +173,54 @@ const Experience: React.FC = () => {
                 onClick={() => toggleExpand(index)}
                 onMouseEnter={() => setHoveredId(index)}
                 onMouseLeave={() => setHoveredId(null)}
-                role="button"
-                aria-expanded={isExpanded}
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    toggleExpand(index);
-                  }
-                }}
               >
-                {/* Header: Icon (Left), Logo, Title Group */}
-                <div className="card-header">
-                  {/* Expand Icon - Now on Left */}
-                  <div className="expand-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                {/* Accessible Trigger Wrapper */}
+                <div
+                  role="button"
+                  aria-expanded={isExpanded}
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleExpand(index);
+                    }
+                  }}
+                  className="card-trigger"
+                >
+                  {/* Header: Icon (Left), Logo, Title Group */}
+                  <div className="card-header">
+                    {/* Expand Icon - Now on Left */}
+                    <div className="expand-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </div>
+
+                    {isExpanded && (
+                      <div className="company-logo">
+                        {/* Placeholder for logo - using first letter of company */}
+                        {item.logo ? (
+                          <img src={item.logo} alt={`${item.company} logo`} />
+                        ) : (
+                          <span>{item.company.charAt(0)}</span>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="card-title-group">
+                      <h3 className="card-role">{item.role}</h3>
+                      <span className="card-separator">at</span>
+                      <div className="card-company">{item.company}</div>
+                    </div>
                   </div>
 
-                  {isExpanded && (
-                    <div className="company-logo">
-                      {/* Placeholder for logo - using first letter of company */}
-                      {item.logo ? (
-                        <img src={item.logo} alt={`${item.company} logo`} />
-                      ) : (
-                        <span>{item.company.charAt(0)}</span>
-                      )}
+                  {/* Collapsed View: Summary */}
+                  {!isExpanded && item.summary && (
+                    <div className="card-summary">
+                      {item.summary}
                     </div>
                   )}
-
-                  <div className="card-title-group">
-                    <h3 className="card-role">{item.role}</h3>
-                    <span className="card-separator">at</span>
-                    <div className="card-company">{item.company}</div>
-                  </div>
                 </div>
-
-                {/* Collapsed View: Summary */}
-                {!isExpanded && item.summary && (
-                  <div className="card-summary">
-                    {item.summary}
-                  </div>
-                )}
 
                 {/* Expanded View: Details */}
                 {isExpanded && (
@@ -113,7 +237,7 @@ const Experience: React.FC = () => {
 
                     {/* Summary if present */}
                     {item.summary && (
-                      <p style={{ marginBottom: '1.5rem', fontStyle: 'italic', color: 'var(--color-text-secondary)' }}>{item.summary}</p>
+                      <p className="card-summary-expanded">{item.summary}</p>
                     )}
 
                     {/* Responsibilities / Description */}
@@ -130,7 +254,7 @@ const Experience: React.FC = () => {
                         <div className="details-section-title">Resultados Chave</div>
                         <ul className="results-list">
                           {item.results.map((res, i) => (
-                            <li key={i} className="result-item" style={{ color: 'var(--color-text-primary)' }}>{res}</li>
+                            <li key={i} className="result-item result-highlight">{res}</li>
                           ))}
                         </ul>
                       </>

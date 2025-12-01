@@ -2,10 +2,11 @@ import type { Project } from '../types';
 import React, { useState } from 'react';
 import Section from './Section';
 import { GithubIcon, ExternalLinkIcon } from './Icons';
-import { projectsData } from '../data/projectsData';
+import { useLanguage } from '../contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+    const { t } = useLanguage();
     const [isHovered, setIsHovered] = useState(false);
     const [isExpandedMobile, setIsExpandedMobile] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -147,7 +148,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <GithubIcon style={{ width: '1.25rem', height: '1.25rem' }} />
-                                            Ver Código
+                                            {t('projects.cta.code')}
                                         </a>
                                     )}
                                     <a
@@ -159,7 +160,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                         onClick={(e) => e.stopPropagation()}
                                     >
                                         <ExternalLinkIcon style={{ width: '1.25rem', height: '1.25rem' }} />
-                                        Ver Projeto
+                                        {t('projects.cta.live')}
                                     </a>
                                 </div>
                             </div>
@@ -195,10 +196,47 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
 };
 
 const Projects: React.FC = () => {
+    const { t } = useLanguage();
+
+    const projects: Project[] = [
+        {
+            title: t('projects.getnet.title'),
+            description: t('projects.getnet.description'),
+            repoUrl: '#',
+            liveUrl: 'https://www.santander.com/en/press-room/press-releases/2024/10/getnet-by-santander-launches-getnet-sep-a-solution-for-e-commerce-payments-in-brazil-argentina-mexico-and-chile-through-a-single-integration',
+            imageUrl: '/images/getnet-project.png',
+            year: '2025',
+        },
+        {
+            title: t('projects.pagonxt.title'),
+            description: t('projects.pagonxt.description'),
+            repoUrl: '#',
+            liveUrl: 'https://www.pagonxt.com/',
+            imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1032&auto=format&fit=crop',
+            year: '2023',
+        },
+        {
+            title: t('projects.sap.title'),
+            description: t('projects.sap.description'),
+            repoUrl: '#',
+            liveUrl: '#',
+            imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=870&auto=format&fit=crop',
+            year: '2021',
+        },
+        {
+            title: t('projects.magenta.title'),
+            description: t('projects.magenta.description'),
+            repoUrl: '#',
+            liveUrl: 'http://devops.telekom.de/de',
+            imageUrl: '/images/magenta-cicd-logo.png',
+            year: '2020',
+        },
+    ];
+
     return (
-        <Section id="projects" title="Projetos Selecionados">
+        <Section id="projects" title={t('projects.title')}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                {projectsData.map((project, index) => (
+                {projects.map((project, index) => (
                     <ProjectListItem key={index} project={project} index={index} />
                 ))}
             </div>

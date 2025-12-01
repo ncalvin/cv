@@ -1,7 +1,7 @@
 import type { EducationItem } from '../types';
 import React from 'react';
 import Section from './Section';
-import { educationData } from '../data/educationData';
+import { useLanguage } from '../contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { AcademicCapIcon } from './Icons';
 
@@ -97,8 +97,85 @@ const EducationBadge: React.FC<{ item: EducationItem; index: number }> = ({ item
 };
 
 const Education: React.FC = () => {
+    const { t } = useLanguage();
+
+    const educationData: EducationItem[] = [
+        {
+            institution: 'Universidade do Sul de Santa Catarina',
+            degree: t('education.unisul.degree'),
+            details: t('education.unisul.details'),
+            year: '2010 - 2013'
+        },
+        {
+            institution: 'Salesforce Trailhead',
+            degree: t('education.salesforce.degree'),
+            details: t('education.salesforce.details'),
+            year: 'Present'
+        },
+        {
+            institution: 'LinkedIn Learning',
+            degree: t('education.devops.degree'),
+            details: t('education.devops.details'),
+            year: '2023'
+        },
+        {
+            institution: 'LinkedIn Learning',
+            degree: t('education.docker.degree'),
+            details: t('education.docker.details'),
+            year: '2023'
+        },
+        {
+            institution: 'Coursera',
+            degree: t('education.product.degree'),
+            details: t('education.product.details'),
+            year: '2023'
+        },
+        {
+            institution: 'Coursera',
+            degree: t('education.security.degree'),
+            details: t('education.security.details'),
+            year: '2014'
+        },
+        {
+            institution: 'CSSC',
+            degree: t('education.sixsigma.degree'),
+            details: t('education.sixsigma.details'),
+            year: '2023'
+        },
+        {
+            institution: 'Humboldt Institut',
+            degree: t('education.german.degree'),
+            details: t('education.german.details'),
+            year: '2016'
+        },
+        {
+            institution: 'Red Hat',
+            degree: t('education.redhat.degree'),
+            details: t('education.redhat.details'),
+            year: 'Course'
+        },
+        {
+            institution: '4Linux',
+            degree: t('education.linux.degree'),
+            details: t('education.linux.details'),
+            year: 'Course'
+        },
+        {
+            institution: 'CompTIA',
+            degree: t('education.comptia.degree'),
+            details: t('education.comptia.details'),
+            year: 'Course'
+        },
+        {
+            institution: 'Skillsoft',
+            degree: t('education.sap.degree'),
+            details: t('education.sap.details'),
+            year: 'Course'
+        }
+    ];
+
     return (
-        <Section id="education" title="Formação Acadêmica">
+        <Section id="education" title={t('education.title')}>
             <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',

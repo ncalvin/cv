@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from './Icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import AvatarLogo from './AvatarLogo';
+import LanguageSelector from './LanguageSelector';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 // --- Types & Interfaces ---
@@ -25,35 +26,15 @@ const NavLink: React.FC<NavLinkProps> = ({ item, isActive, onClick, onHover }) =
     href={item.href}
     onClick={onClick}
     onMouseEnter={onHover}
-    className="nav-link"
+    className={`nav-link-base ${isActive ? 'active' : ''}`}
     aria-current={isActive ? 'page' : undefined}
-    style={{
-      position: 'relative',
-      padding: '0.6rem 1.25rem',
-      fontSize: '0.95rem',
-      fontWeight: 500,
-      color: isActive ? 'var(--color-primary)' : 'var(--color-text-primary)',
-      textDecoration: 'none',
-      display: 'block',
-      transition: 'color 0.3s ease',
-      zIndex: 1,
-      outline: 'none',
-    }}
   >
     {item.label}
     {isActive && (
       <motion.div
         layoutId="nav-pill"
         transition={{ type: "spring", stiffness: 350, damping: 30 }}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundColor: 'rgba(110, 168, 255, 0.12)',
-          borderRadius: '12px',
-          zIndex: -1,
-          border: '1px solid rgba(110, 168, 255, 0.15)',
-          boxShadow: '0 0 20px rgba(110, 168, 255, 0.1)',
-        }}
+        className="nav-pill"
       />
     )}
   </a>
@@ -63,38 +44,7 @@ const ActionButton: React.FC<{ onClick: () => void; label: string; children: Rea
   <button
     onClick={onClick}
     aria-label={label}
-    style={{
-      padding: '0.5rem',
-      borderRadius: '10px',
-      backgroundColor: 'rgba(255, 255, 255, 0.03)',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      cursor: 'pointer',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'var(--color-text-secondary)',
-      transition: 'all 0.2s ease',
-      minWidth: '40px',
-      minHeight: '40px',
-    }}
-    onMouseOver={(e) => {
-      e.currentTarget.style.borderColor = 'var(--color-primary)';
-      e.currentTarget.style.color = 'var(--color-primary)';
-      e.currentTarget.style.backgroundColor = 'rgba(110, 168, 255, 0.05)';
-    }}
-    onMouseOut={(e) => {
-      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-      e.currentTarget.style.color = 'var(--color-text-secondary)';
-      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-    }}
-    onFocus={(e) => {
-      e.currentTarget.style.borderColor = 'var(--color-primary)';
-      e.currentTarget.style.boxShadow = '0 0 0 2px rgba(110, 168, 255, 0.3)';
-    }}
-    onBlur={(e) => {
-      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-      e.currentTarget.style.boxShadow = 'none';
-    }}
+    className="action-button"
   >
     {children}
   </button>
@@ -107,7 +57,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
   const lastScrollY = useRef(0);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
 
   // Scroll Logic: Auto-hide & Transparency
@@ -130,11 +80,12 @@ const Navbar: React.FC = () => {
   });
 
   const navLinks: NavLinkItem[] = [
-    { href: '#about', label: 'Sobre' },
-    { href: '#experience', label: 'Experiência' },
-    { href: '#skills', label: 'Habilidades' },
-    { href: '#projects', label: 'Projetos' },
-    { href: '#contact-section', label: 'Contato' },
+    { href: '#about', label: t('nav.about') },
+    { href: '#experience', label: t('nav.experience') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#courses', label: t('nav.education') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#contact-section', label: t('nav.contact') },
   ];
 
   // Close mobile menu on resize
@@ -169,54 +120,15 @@ const Navbar: React.FC = () => {
         variants={navVariants}
         animate={isHidden ? "hidden" : "visible"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-          display: 'flex',
-          justifyContent: 'center',
-          padding: isScrolled ? '1rem' : '1.5rem',
-          pointerEvents: 'none', // Allow clicks through the container area
-        }}
+        className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}
       >
-        <div
-          style={{
-            pointerEvents: 'auto',
-            width: '100%',
-            maxWidth: '1000px',
-            padding: '0.5rem 1rem',
-            backgroundColor: isScrolled
-              ? (theme === 'light' ? 'rgba(255, 255, 255, 0.85)' : 'rgba(15, 23, 42, 0.85)')
-              : (theme === 'light' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(15, 23, 42, 0.5)'),
-            backdropFilter: 'blur(24px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-            borderRadius: '16px',
-            border: `1px solid ${theme === 'light' ? 'rgba(0, 0, 0, 0.05)' : 'rgba(255, 255, 255, 0.08)'}`,
-            boxShadow: isScrolled
-              ? `0 20px 40px -10px ${theme === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.4)'}, 0 0 0 1px ${theme === 'light' ? 'rgba(0,0,0,0.02)' : 'rgba(255, 255, 255, 0.05)'} inset`
-              : `0 10px 30px -10px ${theme === 'light' ? 'rgba(0, 0, 0, 0.05)' : 'rgba(0, 0, 0, 0.2)'}, 0 0 0 1px ${theme === 'light' ? 'rgba(0,0,0,0.02)' : 'rgba(255, 255, 255, 0.05)'} inset`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center', // Centered content
-            gap: '2rem', // Added gap for spacing
-            transition: 'all 0.3s ease',
-          }}
-        >
+        <div className={`navbar-container ${isScrolled ? 'scrolled' : ''}`}>
           {/* Logo Section - Removed as per request */}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center" role="navigation" aria-label="Main Navigation">
             <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                borderRadius: '12px',
-                padding: '0.25rem',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
-              }}
+              className="nav-links-container"
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {navLinks.map((link, index) => (
@@ -230,13 +142,8 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginLeft: '1rem', gap: '0.5rem' }}>
-              <ActionButton
-                onClick={() => setLanguage(language === 'pt' ? 'en' : 'pt')}
-                label={`Switch to ${language === 'pt' ? 'English' : 'Portuguese'}`}
-              >
-                <span style={{ fontSize: '0.8rem', fontWeight: 700 }}>{language === 'pt' ? 'EN' : 'PT'}</span>
-              </ActionButton>
+            <div className="nav-actions-container">
+              <LanguageSelector />
 
               <ActionButton
                 onClick={toggleTheme}
@@ -283,13 +190,7 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.6)',
-              backdropFilter: 'blur(4px)',
-              zIndex: 998,
-            }}
+            className="mobile-menu-overlay"
             onClick={() => setIsOpen(false)}
           />
         )}
@@ -306,31 +207,16 @@ const Navbar: React.FC = () => {
             role="dialog"
             aria-modal="true"
             aria-label="Mobile Navigation"
-            style={{
-              position: 'fixed',
-              top: 0,
-              right: 0,
-              bottom: 0,
-              width: '80%',
-              maxWidth: '320px',
-              backgroundColor: 'var(--color-bg-secondary)',
-              borderLeft: '1px solid var(--color-border)',
-              zIndex: 999,
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '2rem',
-              boxShadow: '-10px 0 30px rgba(0,0,0,0.5)',
-            }}
+            className="mobile-menu-drawer"
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-primary)' }}>Menu</span>
+            <div className="mobile-menu-header">
+              <span className="mobile-menu-title">Menu</span>
               <ActionButton onClick={() => setIsOpen(false)} label="Close menu">
                 <XIcon />
               </ActionButton>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <div className="mobile-menu-links">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
@@ -339,19 +225,7 @@ const Navbar: React.FC = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  style={{
-                    padding: '1rem',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(255,255,255,0.03)',
-                    color: 'var(--color-text-primary)',
-                    textDecoration: 'none',
-                    fontWeight: 500,
-                    fontSize: '1.1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    border: '1px solid transparent',
-                  }}
+                  className="mobile-menu-link"
                   whileHover={{
                     backgroundColor: 'rgba(110, 168, 255, 0.1)',
                     borderColor: 'rgba(110, 168, 255, 0.2)',
@@ -367,13 +241,8 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-              <ActionButton
-                onClick={() => setLanguage(language === 'pt' ? 'en' : 'pt')}
-                label="Switch Language"
-              >
-                <span style={{ fontWeight: 600, padding: '0 0.5rem' }}>{language === 'pt' ? 'English' : 'Português'}</span>
-              </ActionButton>
+            <div className="mobile-menu-footer">
+              <LanguageSelector />
 
               <ActionButton
                 onClick={toggleTheme}

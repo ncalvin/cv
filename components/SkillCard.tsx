@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { SkillCard } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export interface FlipCardProps {
     skill: SkillCard;
@@ -27,6 +28,7 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
     axis = 'y',
     disabled = false
 }) => {
+    const { t } = useLanguage();
     const [isFlipped, setIsFlipped] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
@@ -149,10 +151,12 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
             className="animate-on-scroll"
             style={{
                 perspective: prefersReducedMotion ? 'none' : '1300px',
-                height: '220px',
                 cursor: disabled ? 'not-allowed' : 'pointer',
                 opacity: disabled ? 0.6 : 1,
-                transition: 'opacity 0.2s ease'
+                transition: 'opacity 0.2s ease',
+                height: '100%', // Fluid height
+                width: '100%', // Ensure full width
+                minHeight: '260px' // Minimum height for consistency
             }}
             onClick={handleFlip}
             onMouseEnter={handleMouseEnter}
@@ -162,30 +166,31 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
             onBlur={handleBlur}
             tabIndex={disabled ? -1 : 0}
             role="article"
-            aria-label={`${skill.name} - ${isFlipped ? 'mostrando detalhes' : 'pressione Enter ou Space para ver detalhes'}`}
+            aria-label={`${skill.name} - ${isFlipped ? t('skills.card.aria.showingDetails') : t('skills.card.aria.pressEnter')}`}
         >
             <div
                 style={{
                     position: 'relative',
                     width: '100%',
                     height: '100%',
+                    display: 'grid',
+                    gridTemplateAreas: '"stack"',
                     transformStyle: prefersReducedMotion ? 'flat' : 'preserve-3d',
                     transition: prefersReducedMotion
                         ? 'opacity 0.3s ease'
                         : `transform ${FLIP_DURATION} ${FLIP_EASING}`,
                     transform: prefersReducedMotion ? 'none' : rotateTransform,
                     willChange: prefersReducedMotion ? 'auto' : 'transform',
-                    outline: isFocused ? '3px solid var(--color-primary)' : 'none',
-                    outlineOffset: '4px',
+                    outline: 'none',
                     borderRadius: 'var(--radius-xl)'
                 }}
             >
                 {/* Front Side - Brand First Design */}
                 <div
                     style={{
-                        position: 'absolute',
+                        gridArea: 'stack',
                         width: '100%',
-                        height: '100%',
+                        height: '100%', // Ensure it fills the grid cell
                         backfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
                         WebkitBackfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
                         display: prefersReducedMotion && isFlipped ? 'none' : 'flex',
@@ -194,7 +199,7 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                         justifyContent: 'center',
                         backgroundColor: 'var(--color-bg-secondary)',
                         borderRadius: 'var(--radius-xl)',
-                        border: `1px solid ${isHovered && !isFlipped ? accentColor : accentBorder}`,
+                        border: `2px solid ${isHovered && !isFlipped ? accentColor : accentBorder}`,
                         padding: '1.25rem',
                         boxShadow: isFlipped
                             ? 'none'
@@ -294,7 +299,7 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                             transition: 'opacity 0.3s ease',
                             transform: 'translateY(0)'
                         }}>
-                            <span>Ver detalhes</span>
+                            <span>{t('skills.card.viewDetails')}</span>
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" style={{
                                 transition: 'transform 0.3s ease',
                                 transform: isHovered ? 'translateX(1px)' : 'translateX(0)'
@@ -308,24 +313,24 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                 {/* Back Side - Results & Skills Focused */}
                 <div
                     style={{
-                        position: 'absolute',
+                        gridArea: 'stack',
                         width: '100%',
-                        height: '100%',
+                        height: '100%', // Ensure it fills the grid cell
                         backfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
                         WebkitBackfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
                         display: prefersReducedMotion && !isFlipped ? 'none' : 'flex',
                         flexDirection: 'column',
                         alignItems: 'flex-start',
                         justifyContent: 'flex-start',
-                        background: 'linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)',
+                        background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)',
                         borderRadius: 'var(--radius-xl)',
-                        padding: '0.875rem',
+                        padding: '1.25rem',
                         boxShadow: isFlipped
-                            ? `0 8px 16px -4px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)`
+                            ? `0 20px 40px -10px rgba(30, 58, 138, 0.5)`
                             : 'none',
                         transform: prefersReducedMotion ? 'none' : (axis === 'y' ? 'rotateY(180deg)' : 'rotateX(180deg)'),
                         color: '#ffffff',
-                        border: `1px solid rgba(255, 255, 255, 0.1)`,
+                        border: `1px solid rgba(59, 130, 246, 0.3)`,
                         opacity: prefersReducedMotion ? 1 : (isFlipped ? 1 : 0),
                         transition: prefersReducedMotion
                             ? 'opacity 0.25s ease'
@@ -337,24 +342,17 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                     aria-live="polite"
                 >
                     {/* Header */}
-                    <div style={{ width: '100%', marginBottom: '0.375rem' }}>
+                    <div style={{ width: '100%', marginBottom: '0.5rem' }}>
                         <h3 style={{
-                            fontSize: '0.875rem',
-                            fontWeight: 600,
-                            marginBottom: '0.1875rem',
-                            color: '#60a5fa',
-                            textShadow: 'none',
-                            lineHeight: 1.2
+                            fontSize: '1rem',
+                            fontWeight: 700,
+                            marginBottom: '0.5rem',
+                            color: 'white',
+                            textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                            lineHeight: 1.3
                         }}>
                             {skill.name}
                         </h3>
-                        <div style={{
-                            width: '32px',
-                            height: '2px',
-                            backgroundColor: '#60a5fa',
-                            borderRadius: 'var(--radius-full)',
-                            opacity: 0.8
-                        }} />
                     </div>
 
                     {/* Results/Metrics */}
@@ -388,10 +386,10 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
 
                     {/* Description */}
                     <p style={{
-                        fontSize: '0.6875rem',
-                        lineHeight: 1.45,
-                        color: 'rgba(255, 255, 255, 0.9)',
-                        margin: '0 0 0.375rem 0',
+                        fontSize: '0.75rem',
+                        lineHeight: 1.5,
+                        color: 'rgba(255, 255, 255, 0.95)',
+                        margin: '0 0 0.75rem 0',
                         fontWeight: 400,
                         textShadow: 'none'
                     }}>
@@ -459,7 +457,7 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                                 e.currentTarget.style.transform = 'translateX(0)';
                             }}
                         >
-                            <span>Vamos conversar sobre isso</span>
+                            <span>{t('skills.card.cta')}</span>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M3 6h6M6 3l3 3-3 3" />
                             </svg>
@@ -480,7 +478,7 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                             <svg width="8" height="8" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M2 2L8 8M8 2L2 8" strokeLinecap="round" />
                             </svg>
-                            <span>ESC ou clique para fechar</span>
+                            <span>{t('skills.card.closeHint')}</span>
                         </div>
                     )}
                 </div>
@@ -498,8 +496,8 @@ export const SkillFlipCard: React.FC<FlipCardProps> = ({
                     border: 0
                 }}>
                     {isFlipped
-                        ? `Detalhes de ${skill.name}: ${skill.description}`
-                        : `${skill.name} com ${skill.level}% de proficiência`}
+                        ? `${t('skills.card.aria.detailsOf')} ${skill.name}: ${skill.description}`
+                        : `${skill.name} ${t('skills.card.aria.withProficiency', { level: skill.level })}`}
                 </div>
             </div>
         </div>

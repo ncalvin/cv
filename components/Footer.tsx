@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <footer style={{
       backgroundColor: 'var(--color-bg-secondary)',
@@ -21,14 +24,14 @@ const Footer: React.FC = () => {
           margin: 0
         }}>
           &copy; {new Date().getFullYear()} <strong style={{ color: 'var(--color-text-secondary)' }}>Newton Calvin</strong>.
-          Todos os direitos reservados.
+          {t('footer.rights')}
         </p>
         <p style={{
           color: 'var(--color-text-tertiary)',
           fontSize: '0.75rem',
           marginTop: 'var(--spacing-sm)'
         }}>
-          Feito com ❤️ e tecnologia moderna
+          {t('footer.madeWith')}
         </p>
       </div>
     </footer>

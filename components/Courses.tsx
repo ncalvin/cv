@@ -4,13 +4,16 @@ import Section from './Section';
 import { coursesData } from '../data/coursesData';
 import { AwardIcon, BookOpenIcon, TerminalIcon, ChevronDownIcon } from './Icons';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Type badge component
 const TypeBadge: React.FC<{ type: CourseItem['type'] }> = ({ type }) => {
+    const { t } = useLanguage();
+
     const config = {
-        certification: { label: 'Certificação', color: '#10B981', bg: 'rgba(16, 185, 129, 0.1)' },
-        course: { label: 'Curso', color: '#3B82F6', bg: 'rgba(59, 130, 246, 0.1)' },
-        training: { label: 'Treinamento', color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.1)' }
+        certification: { label: t('courses.filters.certification'), color: '#10B981', bg: 'rgba(16, 185, 129, 0.1)' },
+        course: { label: t('courses.filters.course'), color: '#3B82F6', bg: 'rgba(59, 130, 246, 0.1)' },
+        training: { label: t('courses.filters.training'), color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.1)' }
     };
 
     const { label, color, bg } = config[type];
@@ -55,6 +58,7 @@ const CourseAccordionItem: React.FC<{
 }> = ({ course, index, isNewest, isOpen, onToggle }) => {
     const [isHovered, setIsHovered] = useState(false);
     const headerRef = useRef<HTMLButtonElement>(null);
+    const { t } = useLanguage();
 
     // Auto-scroll on mobile when opening
     useEffect(() => {
@@ -147,10 +151,8 @@ const CourseAccordionItem: React.FC<{
                                 fontWeight: 600,
                                 color: 'var(--color-text-primary)',
                                 margin: 0,
-                                whiteSpace: 'nowrap',
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                                position: 'relative'
+                                position: 'relative',
+                                lineHeight: 1.4
                             }}>
                                 {course.title}
                                 <span style={{
@@ -164,7 +166,7 @@ const CourseAccordionItem: React.FC<{
                                 }} />
                             </h3>
                             {course.verified && (
-                                <span title="Verificado" style={{ color: '#10B981', display: 'flex', alignItems: 'center' }}>
+                                <span title={t('courses.verified')} style={{ color: '#10B981', display: 'flex', alignItems: 'center' }}>
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
                                 </span>
                             )}
@@ -289,7 +291,7 @@ const CourseAccordionItem: React.FC<{
                                             marginTop: '0.5rem'
                                         }}
                                     >
-                                        Ver Credencial Oficial
+                                        {t('courses.viewCredential')}
                                         <motion.span
                                             animate={{ x: [0, 3, 0] }}
                                             transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
@@ -311,10 +313,22 @@ const CourseAccordionItem: React.FC<{
 const Courses: React.FC = () => {
     const [selectedType, setSelectedType] = useState<CourseItem['type'] | 'all'>('all');
     const [expandedRow, setExpandedRow] = useState<number | null>(null);
+    const { t } = useLanguage();
+
+    // Translate courses data
+    const translatedCourses = useMemo(() => {
+        return coursesData.map(course => ({
+            ...course,
+            title: t(`courses.items.${course.id}.title`),
+            institution: t(`courses.items.${course.id}.institution`),
+            summary: t(`courses.items.${course.id}.summary`),
+            bullets: (t(`courses.items.${course.id}.bullets`, { returnObjects: true }) as unknown) as string[]
+        }));
+    }, [t]);
 
     // Filter and Sort courses
     const filteredCourses = useMemo(() => {
-        let filtered = coursesData;
+        let filtered = translatedCourses;
 
         // Filter by type
         if (selectedType !== 'all') {
@@ -327,7 +341,7 @@ const Courses: React.FC = () => {
             const dateB = b.dateCompleted || '0000-00';
             return dateB.localeCompare(dateA);
         });
-    }, [selectedType]);
+    }, [selectedType, translatedCourses]);
 
     // Identify the newest item ID for the pulse effect
     const newestCourseId = useMemo(() => {
@@ -347,7 +361,7 @@ const Courses: React.FC = () => {
     }, []);
 
     return (
-        <Section id="courses" title="Cursos e Certificações">
+        <Section id="courses" title={t('courses.title')}>
             <div style={{
                 maxWidth: '1000px', // Increased max-width for 2-column layout
                 margin: '0 auto'
@@ -367,7 +381,7 @@ const Courses: React.FC = () => {
                         margin: '0 0 2rem 0',
                         lineHeight: 1.5
                     }}>
-                        Aprendizado contínuo e validação técnica.
+                        {t('courses.subtitle')}
                     </p>
 
                     {/* Filter Pills */}
@@ -396,7 +410,10 @@ const Courses: React.FC = () => {
                                     gap: '0.4rem'
                                 }}
                             >
-                                {type === 'all' ? 'Todos' : type === 'certification' ? 'Certificações' : type === 'course' ? 'Cursos' : 'Treinamentos'}
+                                {type === 'all' ? t('courses.filters.all') :
+                                    type === 'certification' ? t('courses.filters.certification') :
+                                        type === 'course' ? t('courses.filters.course') :
+                                            t('courses.filters.training')}
                                 <span style={{
                                     fontSize: '0.7rem',
                                     opacity: 0.7,
@@ -449,7 +466,7 @@ const Courses: React.FC = () => {
                         padding: '3rem',
                         color: 'var(--color-text-tertiary)'
                     }}>
-                        Nenhum resultado encontrado.
+                        {t('courses.noResults')}
                     </div>
                 )}
             </div>

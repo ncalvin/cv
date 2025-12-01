@@ -1,8 +1,10 @@
 import React from 'react';
 import Section from './Section';
 import { LinkedinIcon, GithubIcon, MailIcon } from './Icons';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [errorMessage, setErrorMessage] = React.useState('');
@@ -28,17 +30,17 @@ const Contact: React.FC = () => {
       if (response.ok) {
         setIsSuccess(true);
       } else {
-        setErrorMessage('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+        setErrorMessage(t('contact.error.generic'));
       }
     } catch (error) {
-      setErrorMessage('Ocorreu um erro de conexão. Verifique sua internet e tente novamente.');
+      setErrorMessage(t('contact.error.connection'));
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <Section id="contact-section" title="Vamos Conversar?">
+    <Section id="contact-section" title={t('contact.title')}>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-3xl)' }} className="animate-on-scroll">
           <p style={{
@@ -46,7 +48,7 @@ const Contact: React.FC = () => {
             color: 'var(--color-text-secondary)',
             marginBottom: 'var(--spacing-xl)'
           }}>
-            Tem alguma pergunta ou quer trabalhar junto? Entre em contato!
+            {t('contact.description')}
           </p>
 
           {/* Social Links */}
@@ -116,8 +118,8 @@ const Contact: React.FC = () => {
               borderRadius: 'var(--radius-lg)',
               border: '1px solid rgba(16, 185, 129, 0.3)'
             }}>
-              <h3 style={{ color: '#10b981', marginBottom: '0.5rem' }}>Mensagem Enviada!</h3>
-              <p style={{ color: 'var(--color-text-secondary)' }}>Obrigado pelo contato. Retornarei o mais breve possível.</p>
+              <h3 style={{ color: '#10b981', marginBottom: '0.5rem' }}>{t('contact.success.title')}</h3>
+              <p style={{ color: 'var(--color-text-secondary)' }}>{t('contact.success.message')}</p>
               <button
                 onClick={() => setIsSuccess(false)}
                 style={{
@@ -131,7 +133,7 @@ const Contact: React.FC = () => {
                   fontSize: '0.875rem'
                 }}
               >
-                Enviar outra mensagem
+                {t('contact.success.button')}
               </button>
             </div>
           ) : (
@@ -141,12 +143,12 @@ const Contact: React.FC = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                 <div>
-                  <label htmlFor="name" className="sr-only">Nome</label>
+                  <label htmlFor="name" className="sr-only">{t('contact.form.name')}</label>
                   <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Seu Nome"
+                    placeholder={t('contact.form.name.placeholder')}
                     required
                     disabled={isSubmitting}
                     style={{
@@ -167,12 +169,12 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="sr-only">Email</label>
+                  <label htmlFor="email" className="sr-only">{t('contact.form.email')}</label>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Seu Email"
+                    placeholder={t('contact.form.email.placeholder')}
                     required
                     disabled={isSubmitting}
                     style={{
@@ -194,12 +196,12 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="sr-only">Mensagem</label>
+                <label htmlFor="message" className="sr-only">{t('contact.form.message')}</label>
                 <textarea
                   name="message"
                   id="message"
                   rows={4}
-                  placeholder="Sua Mensagem"
+                  placeholder={t('contact.form.message.placeholder')}
                   required
                   disabled={isSubmitting}
                   style={{
@@ -258,7 +260,7 @@ const Contact: React.FC = () => {
                   }
                 }}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
               </button>
             </form>
           )}

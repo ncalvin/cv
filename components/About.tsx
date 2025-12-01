@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Section from './Section';
 import { softSkillsData, type SoftSkill } from '../data/softSkillsData';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Ícones SVG minimalistas
 const icons = {
@@ -168,8 +169,9 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
       className="animate-on-scroll"
       style={{
         perspective: prefersReducedMotion ? 'none' : '1300px',
-        height: '240px',
         cursor: 'pointer',
+        height: 'auto', // Fluid height
+        minHeight: '240px' // Minimum height for consistency
       }}
       onClick={handleFlip}
       onMouseEnter={handleMouseEnter}
@@ -186,22 +188,23 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
           position: 'relative',
           width: '100%',
           height: '100%',
+          display: 'grid',
+          gridTemplateAreas: '"stack"',
           transformStyle: prefersReducedMotion ? 'flat' : 'preserve-3d',
           transition: prefersReducedMotion
             ? 'opacity 0.3s ease'
             : `transform ${FLIP_DURATION} ${FLIP_EASING}`,
           transform: prefersReducedMotion ? 'none' : (isFlipped ? (axis === 'y' ? 'rotateY(180deg)' : 'rotateX(180deg)') : (axis === 'y' ? 'rotateY(0deg)' : 'rotateX(0deg)')),
           borderRadius: 'var(--radius-xl)',
-          outline: isFocused ? '3px solid var(--color-primary)' : 'none',
-          outlineOffset: '4px'
+          outline: 'none'
         }}
       >
         {/* Front Side */}
         <div
           style={{
-            position: 'absolute',
+            gridArea: 'stack',
             width: '100%',
-            height: '100%',
+            height: '100%', // Ensure it fills the grid cell
             backfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
             display: prefersReducedMotion && isFlipped ? 'none' : 'flex',
             flexDirection: 'column',
@@ -284,9 +287,9 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
         {/* Back Side */}
         <div
           style={{
-            position: 'absolute',
+            gridArea: 'stack',
             width: '100%',
-            height: '100%',
+            height: '100%', // Ensure it fills the grid cell
             backfaceVisibility: prefersReducedMotion ? 'visible' : 'hidden',
             display: prefersReducedMotion && !isFlipped ? 'none' : 'flex',
             flexDirection: 'column',
@@ -381,31 +384,103 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
 };
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+
+  const softSkills: SoftSkill[] = [
+    {
+      name: t('softskills.leadership.name'),
+      icon: 'compass',
+      tagline: t('softskills.leadership.tagline'),
+      description: t('softskills.leadership.description'),
+      examples: [
+        t('softskills.leadership.example1'),
+        t('softskills.leadership.example2'),
+        t('softskills.leadership.example3')
+      ]
+    },
+    {
+      name: t('softskills.communication.name'),
+      icon: 'message',
+      tagline: t('softskills.communication.tagline'),
+      description: t('softskills.communication.description'),
+      examples: [
+        t('softskills.communication.example1'),
+        t('softskills.communication.example2'),
+        t('softskills.communication.example3')
+      ]
+    },
+    {
+      name: t('softskills.mentorship.name'),
+      icon: 'users',
+      tagline: t('softskills.mentorship.tagline'),
+      description: t('softskills.mentorship.description'),
+      examples: [
+        t('softskills.mentorship.example1'),
+        t('softskills.mentorship.example2'),
+        t('softskills.mentorship.example3')
+      ]
+    },
+    {
+      name: t('softskills.strategic.name'),
+      icon: 'target',
+      tagline: t('softskills.strategic.tagline'),
+      description: t('softskills.strategic.description'),
+      examples: [
+        t('softskills.strategic.example1'),
+        t('softskills.strategic.example2'),
+        t('softskills.strategic.example3')
+      ]
+    },
+    {
+      name: t('softskills.problem_solving.name'),
+      icon: 'lightbulb',
+      tagline: t('softskills.problem_solving.tagline'),
+      description: t('softskills.problem_solving.description'),
+      examples: [
+        t('softskills.problem_solving.example1'),
+        t('softskills.problem_solving.example2'),
+        t('softskills.problem_solving.example3')
+      ]
+    },
+    {
+      name: t('softskills.teamwork.name'),
+      icon: 'handshake',
+      tagline: t('softskills.teamwork.tagline'),
+      description: t('softskills.teamwork.description'),
+      examples: [
+        t('softskills.teamwork.example1'),
+        t('softskills.teamwork.example2'),
+        t('softskills.teamwork.example3')
+      ]
+    }
+  ];
+
   return (
-    <Section id="about" title="Sobre Mim">
+    <Section id="about" title={t('about.title')}>
       <div style={{
         width: '100%',
         margin: '0 auto',
       }}>
         {/* Professional Summary */}
         <div className="animate-on-scroll" style={{ marginBottom: '3rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 3rem auto' }}>
-          <p style={{
-            fontSize: '1.125rem',
-            lineHeight: '1.8',
-            color: 'var(--color-text-secondary)',
-          }}>
-            Como um <strong>Tech Lead</strong> experiente, combino expertise técnica no ecossistema <strong>Salesforce</strong> com uma visão estratégica de negócios. Minha trajetória é marcada pela entrega de soluções escaláveis e pela capacidade de traduzir requisitos complexos em arquiteturas eficientes. Lidero times multidisciplinares, fomentando uma cultura de excelência técnica, inovação e entrega contínua. Meu foco é ajudar empresas e startups a otimizarem seus processos tecnológicos e alcançarem novos patamares de eficiência.
-          </p>
+          <p
+            style={{
+              fontSize: '1.125rem',
+              lineHeight: '1.8',
+              color: 'var(--color-text-secondary)',
+            }}
+            dangerouslySetInnerHTML={{ __html: t('about.summary') }}
+          />
         </div>
 
         {/* Soft Skills Flip Cards */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: 'var(--spacing-xl)',
+          gap: '32px',
           marginTop: '0'
         }}>
-          {softSkillsData.map((skill, index) => (
+          {softSkills.map((skill, index) => (
             <SoftSkillFlipCard key={skill.name} skill={skill} index={index} />
           ))}
         </div>
