@@ -181,13 +181,13 @@ const Header: React.FC = () => {
 
 const styles: { [key: string]: React.CSSProperties } = {
   hero: {
-    minHeight: 'calc(100vh + 8rem)',
+    minHeight: '100vh',
     display: 'flex',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
     padding: '0 0 0', // Zero bottom padding
-    paddingTop: 'calc(80px + 5px)',
+    paddingTop: 'calc(80px + env(safe-area-inset-top))', // Mobile safe area
     overflow: 'visible',
     background: 'transparent',
   },
@@ -323,7 +323,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     animation: 'pulse 2s ease-in-out infinite',
   },
   mainTitle: {
-    fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', // Significantly reduced max size
+    fontSize: 'clamp(2rem, 8vw, 4.5rem)', // Significantly reduced max size
     fontWeight: 800,
     marginBottom: '0.25rem',
     background: 'linear-gradient(90deg, #FFFFFF 0%, #6EA8FF 50%, #FFFFFF 100%)',

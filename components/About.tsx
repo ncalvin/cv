@@ -394,7 +394,7 @@ const About: React.FC = () => {
             lineHeight: '1.8',
             color: 'var(--color-text-secondary)',
           }}>
-            Como um <strong>Tech Lead</strong> experiente, combino expertise técnica profunda no ecossistema <strong>Salesforce</strong> com uma visão estratégica de negócios. Minha trajetória é marcada pela entrega de soluções escaláveis e pela capacidade de traduzir requisitos complexos em arquiteturas eficientes. Atuando como <strong>Tech Manager</strong>, lidero times multidisciplinares, fomentando uma cultura de excelência técnica, inovação e entrega contínua. Meu foco é ajudar empresas e startups a otimizarem seus processos tecnológicos e alcançarem novos patamares de eficiência.
+            Como um <strong>Tech Lead</strong> experiente, combino expertise técnica no ecossistema <strong>Salesforce</strong> com uma visão estratégica de negócios. Minha trajetória é marcada pela entrega de soluções escaláveis e pela capacidade de traduzir requisitos complexos em arquiteturas eficientes. Lidero times multidisciplinares, fomentando uma cultura de excelência técnica, inovação e entrega contínua. Meu foco é ajudar empresas e startups a otimizarem seus processos tecnológicos e alcançarem novos patamares de eficiência.
           </p>
         </div>
 

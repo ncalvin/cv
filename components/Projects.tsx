@@ -7,6 +7,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isExpandedMobile, setIsExpandedMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const isActive = isMobile ? isExpandedMobile : isHovered;
+
+    const handleInteraction = () => {
+        if (isMobile) {
+            setIsExpandedMobile(!isExpandedMobile);
+        }
+    };
 
     return (
         <motion.div
@@ -14,8 +31,9 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => !isMobile && setIsHovered(true)}
+            onMouseLeave={() => !isMobile && setIsHovered(false)}
+            onClick={handleInteraction}
             className="project-list-item"
             style={{
                 borderBottom: '1px solid var(--color-border)',
@@ -33,7 +51,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                 position: 'relative',
                 zIndex: 2
             }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', maxWidth: '85%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', maxWidth: '85%', flexWrap: 'wrap' }}>
                     {project.year && (
                         <span style={{
                             fontSize: '0.875rem',
@@ -48,29 +66,30 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                         </span>
                     )}
                     <h3 style={{
-                        fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+                        fontSize: 'clamp(1.25rem, 4vw, 2.5rem)',
                         fontWeight: 800,
-                        color: isHovered ? 'var(--color-primary)' : 'var(--color-text-primary)',
+                        color: isActive ? 'var(--color-primary)' : 'var(--color-text-primary)',
                         transition: 'color 0.3s ease',
                         margin: 0,
+                        lineHeight: 1.2
                     }}>
                         {project.title}
                     </h3>
                 </div>
                 <motion.span
-                    animate={{ rotate: isHovered ? 45 : 0 }}
+                    animate={{ rotate: isActive ? 45 : 0 }}
                     style={{
                         fontSize: '2rem',
-                        color: isHovered ? 'var(--color-primary)' : 'var(--color-text-tertiary)'
+                        color: isActive ? 'var(--color-primary)' : 'var(--color-text-tertiary)'
                     }}
                 >
                     ↗
                 </motion.span>
             </div>
 
-            {/* Expanded Content (Faded In) */}
+            {/* Expanded Content */}
             <AnimatePresence>
-                {isHovered && (
+                {isActive && (
                     <motion.div
                         initial={{ opacity: 0, height: 0, marginTop: 0 }}
                         animate={{ opacity: 1, height: 'auto', marginTop: '2rem' }}
@@ -80,10 +99,33 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                     >
                         <div className="project-content-grid" style={{
                             display: 'grid',
-                            gridTemplateColumns: '1fr 1fr',
+                            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
                             gap: '2rem',
                             alignItems: 'center'
                         }}>
+                            {/* Mobile Image (First) */}
+                            {isMobile && (
+                                <div style={{
+                                    borderRadius: 'var(--radius-lg)',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+                                    border: '1px solid rgba(96, 165, 250, 0.3)',
+                                    height: '200px',
+                                    width: '100%'
+                                }}>
+                                    <img
+                                        src={project.imageUrl}
+                                        alt={project.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            objectPosition: 'center'
+                                        }}
+                                    />
+                                </div>
+                            )}
+
                             {/* Description & Links */}
                             <div>
                                 <p style={{
@@ -94,7 +136,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                 }}>
                                     {project.description}
                                 </p>
-                                <div style={{ display: 'flex', gap: '1rem' }}>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                                     {project.repoUrl && project.repoUrl !== '#' && (
                                         <a
                                             href={project.repoUrl}
@@ -102,6 +144,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                             rel="noopener noreferrer"
                                             className="btn-text"
                                             style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                                            onClick={(e) => e.stopPropagation()}
                                         >
                                             <GithubIcon style={{ width: '1.25rem', height: '1.25rem' }} />
                                             Ver Código
@@ -113,6 +156,7 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                         rel="noopener noreferrer"
                                         className="btn-text"
                                         style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-primary)' }}
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         <ExternalLinkIcon style={{ width: '1.25rem', height: '1.25rem' }} />
                                         Ver Projeto
@@ -120,49 +164,32 @@ const ProjectListItem: React.FC<{ project: Project; index: number }> = ({ projec
                                 </div>
                             </div>
 
-                            {/* Image Preview */}
-                            <div style={{
-                                borderRadius: 'var(--radius-lg)',
-                                overflow: 'hidden',
-                                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-                                border: '1px solid rgba(96, 165, 250, 0.3)',
-                                height: '250px',
-                                width: '100%'
-                            }}>
-                                <img
-                                    src={project.imageUrl}
-                                    alt={project.title}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        objectPosition: 'center'
-                                    }}
-                                />
-                            </div>
+                            {/* Desktop Image (Second) */}
+                            {!isMobile && (
+                                <div style={{
+                                    borderRadius: 'var(--radius-lg)',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+                                    border: '1px solid rgba(96, 165, 250, 0.3)',
+                                    height: '250px',
+                                    width: '100%'
+                                }}>
+                                    <img
+                                        src={project.imageUrl}
+                                        alt={project.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            objectPosition: 'center'
+                                        }}
+                                    />
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
-
-            {/* Mobile Fallback (Always visible on small screens, hidden on desktop via CSS) */}
-            <div className="mobile-only-content" style={{ marginTop: '1.5rem', display: 'none' }}>
-                <style>{`
-                    @media (max-width: 768px) {
-                        .project-content-grid {
-                            grid-template-columns: 1fr !important;
-                        }
-                        .mobile-only-content {
-                            display: block !important;
-                        }
-                        .project-list-item:hover .project-content-grid {
-                            display: none !important;
-                        }
-                    }
-                `}</style>
-                <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1rem' }}>{project.description}</p>
-                <a href={project.liveUrl} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ver Projeto →</a>
-            </div>
         </motion.div>
     );
 };

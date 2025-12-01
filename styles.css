@@ -125,6 +125,43 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent auto-zoom on inputs in iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Remove default tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch targets for mobile */
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 375px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --section-padding-y: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Utility to hide on mobile if needed */
+.hidden-mobile {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
