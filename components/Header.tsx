@@ -1,10 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { DownloadIcon, MailIcon } from './Icons';
-import DownloadCVButton from './DownloadCVButton';
+import React, { useEffect, useRef } from 'react';
 import AvatarLogo from './AvatarLogo';
 import { motion, useInView, useSpring, useTransform } from 'framer-motion';
-
-
 
 const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
   const ref = useRef(null);
@@ -37,33 +33,9 @@ const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
 };
 
 import { useLanguage } from '../contexts/LanguageContext';
-import { generatePDF } from '../src/utils/pdfGenerator';
 
 const Header: React.FC = () => {
-  const { t, language } = useLanguage();
-  const [isDownloading, setIsDownloading] = useState(false);
-
-  const handleDownloadCV = () => {
-    setIsDownloading(true);
-
-    generatePDF(language).then(() => {
-      setIsDownloading(false);
-    });
-  };
-
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.innerHTML = `
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    `;
-    document.head.appendChild(style);
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
+  const { t } = useLanguage();
 
   const scrollToPortfolio = () => {
     const portfolioSection = document.getElementById('projects');
@@ -108,33 +80,6 @@ const Header: React.FC = () => {
             <p style={styles.description} className="animate-on-scroll">
               {t('header.description')}
             </p>
-
-
-
-            {/* CTA Buttons */}
-            <div style={styles.ctaContainer} className="animate-on-scroll">
-
-              <button
-                onClick={handleDownloadCV}
-                className="btn btn-primary"
-                style={styles.ctaPrimary}
-                disabled={isDownloading}
-              >
-                {isDownloading ? (
-                  <div style={{
-                    width: '18px',
-                    height: '18px',
-                    border: '2px solid #fff',
-                    borderTopColor: 'transparent',
-                    borderRadius: '50%',
-                    animation: 'spin 1s linear infinite'
-                  }} />
-                ) : (
-                  <DownloadIcon style={styles.iconDownload} />
-                )}
-                <span style={{ marginLeft: '0.5rem' }}>{isDownloading ? '...' : t('header.cta.download')}</span>
-              </button>
-            </div>
 
             {/* Innovative Scroll Indicator - Auto Scroll Trigger */}
             <motion.div
@@ -366,47 +311,6 @@ const styles: { [key: string]: React.CSSProperties } = {
     fontWeight: 400,
     opacity: 0.8,
   },
-  ctaContainer: {
-    display: 'flex',
-    gap: '1rem',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    marginTop: '1rem',
-  },
-  ctaPrimary: {
-    minHeight: '48px',
-    padding: '0.875rem 1.5rem',
-    fontSize: '1rem',
-    fontWeight: 700,
-    background: 'linear-gradient(135deg, #6EA8FF 0%, #4E7BFF 100%)',
-    boxShadow: '0 4px 14px 0 rgba(110, 168, 255, 0.4)',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-    position: 'relative',
-  },
-  ctaIcon: {
-    fontSize: '1.25rem',
-    lineHeight: 1,
-  },
-  ctaBadge: {
-    fontSize: '0.75rem',
-    fontWeight: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    padding: '0.25rem 0.5rem',
-    borderRadius: '12px',
-    marginLeft: '0.5rem',
-    whiteSpace: 'nowrap',
-  },
-  ctaSecondary: {
-    minHeight: '48px',
-    padding: '0.875rem 1.5rem',
-    fontSize: '1rem',
-    fontWeight: 600,
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-  },
   availabilityBadge: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -423,10 +327,6 @@ const styles: { [key: string]: React.CSSProperties } = {
   availabilityIcon: {
     fontSize: '1.125rem',
     lineHeight: 1,
-  },
-  iconDownload: {
-    width: '18px',
-    height: '18px',
   },
   statsContainer: {
     display: 'flex',
