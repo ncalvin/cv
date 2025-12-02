@@ -35,24 +35,28 @@
 
 /* Primary Variant (Hero) */
 /* Primary Variant (Hero) */
+/* Primary Variant (Hero) - Minimalist & Elegant */
 .cv-btn--primary {
-    background: var(--color-text-primary, #0f172a);
-    color: var(--color-bg-primary, #ffffff);
-    padding: 0.75rem 2rem;
-    border-radius: 9999px;
-    border: 1px solid transparent;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    color: var(--color-text-primary, #0f172a);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+    box-shadow: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .cv-btn--primary:hover {
-    transform: translateY(-1px);
-    background: var(--color-primary, #2563eb);
-    color: white;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transform: translateY(-2px);
+    background: var(--color-text-primary, #0f172a);
+    color: var(--color-bg-primary, #ffffff);
+    border-color: var(--color-text-primary, #0f172a);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cv-btn--primary:active {

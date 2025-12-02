@@ -92,12 +92,44 @@
         }
 
         @media print {
+            @page {
+                margin: 15mm 20mm;
+                size: A4;
+            }
+
             body {
-                padding: 0;
+                padding: 20mm !important;
+                margin: 0 auto !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                box-sizing: border-box;
             }
 
             .no-print {
-                display: none;
+                display: none !important;
+            }
+
+            p,
+            li {
+                page-break-inside: avoid;
+            }
+
+            h1,
+            h2,
+            h3 {
+                page-break-after: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
             }
         }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import AvatarLogo from './AvatarLogo';
+import DownloadCVButton from './DownloadCVButton';
 import { motion, useInView, useSpring, useTransform } from 'framer-motion';
 
 const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
@@ -112,6 +113,11 @@ const Header: React.FC = () => {
                 {t('header.scroll')}
               </motion.span>
             </motion.div>
+
+            {/* CTA Buttons */}
+            <div style={styles.ctaContainer} className="animate-on-scroll">
+              <DownloadCVButton />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -412,6 +418,12 @@ const styles: { [key: string]: React.CSSProperties } = {
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
   },
+  ctaContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    marginTop: '1.5rem',
+  },
 };
 
 // Media query styles applied via inline styles with window.matchMedia
@@ -439,6 +451,10 @@ if (typeof window !== 'undefined') {
     });
 
     Object.assign(styles.statsContainer, {
+      justifyContent: 'flex-start',
+    });
+
+    Object.assign(styles.ctaContainer, {
       justifyContent: 'flex-start',
     });
   }
