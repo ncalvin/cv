@@ -5,11 +5,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    font-family: inherit;
-    font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     border: none;
     outline: none;
     position: relative;
@@ -17,112 +13,170 @@
     text-decoration: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .cv-btn:focus-visible {
     outline: 2px solid var(--color-primary, #007bff);
-    outline-offset: 2px;
+    outline-offset: 4px;
+    border-radius: 50%;
 }
 
 .cv-btn:disabled,
 .cv-btn--loading {
     opacity: 0.7;
     cursor: not-allowed;
-    pointer-events: none;
 }
 
-/* Variants */
-
-/* Primary Variant (Hero) */
-/* Primary Variant (Hero) */
-/* Primary Variant (Hero) - Minimalist & Elegant */
+/* Primary Variant (Icon Only) */
 .cv-btn--primary {
-    background: transparent;
     color: var(--color-text-primary, #0f172a);
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
-    box-shadow: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode adjustments if needed, assuming CSS variables handle it mostly */
+@media (prefers-color-scheme: dark) {
+    .cv-btn--primary {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.05);
+    }
 }
 
 .cv-btn--primary:hover {
-    transform: translateY(-2px);
-    background: var(--color-text-primary, #0f172a);
-    color: var(--color-bg-primary, #ffffff);
-    border-color: var(--color-text-primary, #0f172a);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.cv-btn--primary:active {
-    transform: translateY(0);
-    transform: scale(0.98);
-}
-
-/* Icon-only Variant (Header/Top-right) */
-.cv-btn--icon {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-text-secondary, #64748b);
-    padding: 0.5rem;
-    border-radius: 50%;
-    /* Circular or rounded square */
-    width: 40px;
-    height: 40px;
-}
-
-.cv-btn--icon:hover {
     background: rgba(var(--color-primary-rgb, 37, 99, 235), 0.1);
     color: var(--color-primary, #2563eb);
     border-color: var(--color-primary, #2563eb);
-    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(var(--color-primary-rgb, 37, 99, 235), 0.3);
 }
 
-/* FAB Variant (Mobile) */
-.cv-btn--fab {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--color-primary, #2563eb);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: none;
-    /* Hidden by default on desktop */
-}
-
-@media (max-width: 768px) {
-    .cv-btn--fab {
-        display: flex;
-    }
-
-    .cv-btn--primary {
-        display: none;
-        /* Hide primary on mobile if FAB is preferred, or keep both */
-    }
-}
-
-.cv-btn--fab:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.cv-btn--fab:active {
+.cv-btn--primary:active {
     transform: scale(0.95);
+}
+
+/* Icon Styling */
+.cv-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Link Variant (Text Only) */
+/* Link Variant (Text Only) */
+/* Link Variant (Text Only) */
+/* Circling Line Effect */
+.cv-btn--link {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    /* Added padding for the border */
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: none;
+    border-radius: 4px;
+    /* Slight rounding */
+    backdrop-filter: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1rem;
+    margin-left: -16px;
+    /* Align text with container (compensate for padding) */
+    position: relative;
+    transition: color 0.3s ease;
+    /* Remove background images from main element */
+    background-image: none;
+}
+
+/* Border Drawing Animation using ::before */
+.cv-btn--link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    pointer-events: none;
+
+    /* Gradient Borders */
+    background-image:
+        linear-gradient(90deg, #2563eb, #06b6d4),
+        /* Top */
+        linear-gradient(90deg, #2563eb, #06b6d4),
+        /* Bottom */
+        linear-gradient(180deg, #2563eb, #06b6d4),
+        /* Left */
+        linear-gradient(180deg, #06b6d4, #2563eb);
+    /* Right */
+    background-repeat: no-repeat;
+    background-size: 0% 2px, 0% 2px, 2px 0%, 2px 0%;
+    background-position: top left, bottom right, top left, bottom right;
+    transition: background-size 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Remove old pseudo-element */
+.cv-btn--link::after {
+    display: none;
+}
+
+.cv-btn--link:hover {
+    background: transparent;
+    /* Ensure no fill */
+    color: #2563eb;
+    /* Fallback */
+
+    /* Gradient Text */
+    background-image: linear-gradient(90deg, #2563eb, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.15);
+    /* Subtle glow container */
+    transform: translateY(-1px);
+    /* Slight lift */
+}
+
+.cv-btn--link:active {
+    transform: scale(0.98);
+}
+
+/* Icon Animation */
+.cv-btn--link svg {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), stroke 0.3s ease;
+}
+
+.cv-btn--link:hover svg {
+    transform: translateX(6px) scale(1.1);
+    /* More dynamic movement */
+    stroke: #06b6d4;
+    /* Cyan to match gradient end */
+}
+
+.cv-link-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cv-link-loading {
+    opacity: 0.7;
+    font-size: 0.85rem;
 }
 
 /* Loading Spinner */
 .cv-spinner {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border: 2px solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
@@ -139,34 +193,21 @@
     }
 }
 
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-
-    .cv-btn,
-    .cv-spinner {
-        transition: none;
-        animation: none;
-        transform: none !important;
-    }
-}
-
 /* Toast Notification */
 .cv-toast {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
     color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border-radius: 50px;
     font-size: 14px;
+    font-weight: 500;
     z-index: 2000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.cv-toast--visible {
-    opacity: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
 }

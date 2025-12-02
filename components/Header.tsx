@@ -80,6 +80,8 @@ const Header: React.FC = () => {
 
             <p style={styles.description} className="animate-on-scroll">
               {t('header.description')}
+              <br />
+              <DownloadCVButton variant="link" />
             </p>
 
             {/* Innovative Scroll Indicator - Auto Scroll Trigger */}
@@ -114,10 +116,10 @@ const Header: React.FC = () => {
               </motion.span>
             </motion.div>
 
-            {/* CTA Buttons */}
-            <div style={styles.ctaContainer} className="animate-on-scroll">
+            {/* CTA Buttons - Removed Download Button as it moved to description */}
+            {/* <div style={styles.ctaContainer} className="animate-on-scroll">
               <DownloadCVButton />
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Stats */}

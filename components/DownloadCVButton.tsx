@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { generatePDF } from '../src/utils/pdfGenerator';
 import './DownloadCVButton.css';
 
-// Icons
+// Modern Minimalist Icon
 const DownloadIcon = ({ className }: { className?: string }) => (
     <svg
         className={className}
-        width="20"
-        height="20"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        aria-hidden="true"
     >
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
@@ -26,25 +28,14 @@ const SpinnerIcon = ({ className }: { className?: string }) => (
 );
 
 interface DownloadCVButtonProps {
-    variant?: 'primary' | 'icon' | 'fab';
-    label?: string;
-    fileName?: string;
-    fileUrl?: string;
+    variant?: 'primary' | 'icon' | 'fab' | 'link';
     className?: string;
     style?: React.CSSProperties;
     onClick?: () => void;
 }
 
-import { useLanguage } from '../contexts/LanguageContext';
-import { generatePDF } from '../src/utils/pdfGenerator';
-
-// ... (keep existing imports)
-
 const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
     variant = 'primary',
-    label, // Remove default here, handle inside
-    fileName = 'Newton_Calvin_Tech_Lead_2025.pdf',
-    fileUrl, // Remove default here
     className = '',
     style,
     onClick
@@ -52,9 +43,6 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
     const { t, language } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
     const [showToast, setShowToast] = useState(false);
-
-    // Default label if not provided
-    const buttonLabel = label || t('header.cta.download');
 
     const handleDownload = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -70,7 +58,6 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
             value: 'PDF_HTML_View'
         });
 
-        // Use the new PDF generator
         generatePDF(language).then(() => {
             setIsLoading(false);
             setShowToast(true);
@@ -79,43 +66,88 @@ const DownloadCVButton: React.FC<DownloadCVButtonProps> = ({
         });
     };
 
-    // Determine classes
-    const baseClass = 'cv-btn';
-    const variantClass = `cv-btn--${variant}`;
-    const loadingClass = isLoading ? 'cv-btn--loading' : '';
-
-    // Determine Aria Label
     const ariaLabel = isLoading
-        ? 'Preparando download do currículo...'
-        : `Baixar currículo de Newton Calvin em PDF (${fileName})`;
+        ? 'Preparando download...'
+        : t('header.cta.download');
 
+    // Link variant rendering
+    if (variant === 'link') {
+        return (
+            <>
+                <motion.button
+                    className={`cv-btn cv-btn--link ${isLoading ? 'cv-btn--loading' : ''} ${className}`}
+                    style={style}
+                    onClick={handleDownload}
+                    disabled={isLoading}
+                    aria-label={ariaLabel}
+                    title={t('header.cta.download')}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                >
+                    {isLoading ? (
+                        <span className="cv-link-loading">Carregando...</span>
+                    ) : (
+                        <span className="cv-link-text">
+                            {t('header.cta.download')}
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '4px', display: 'inline-block' }}>
+                                <path d="M7 17L17 7" />
+                                <path d="M7 7h10v10" />
+                            </svg>
+                        </span>
+                    )}
+                </motion.button>
+
+                <AnimatePresence>
+                    {showToast && (
+                        <motion.div
+                            className="cv-toast"
+                            initial={{ opacity: 0, y: 50, x: '-50%' }}
+                            animate={{ opacity: 1, y: 0, x: '-50%' }}
+                            exit={{ opacity: 0, y: 20, x: '-50%' }}
+                        >
+                            CV aberto em nova aba!
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </>
+        );
+    }
+
+    // Default (Icon/Primary) rendering
     return (
         <>
-            <button
-                className={`${baseClass} ${variantClass} ${loadingClass} ${className}`}
+            <motion.button
+                className={`cv-btn cv-btn--${variant} ${isLoading ? 'cv-btn--loading' : ''} ${className}`}
                 style={style}
                 onClick={handleDownload}
                 disabled={isLoading}
                 aria-label={ariaLabel}
-                aria-busy={isLoading}
-                title={label}
-                type="button"
+                title={t('header.cta.download')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
                 {isLoading ? (
                     <SpinnerIcon />
                 ) : (
-                    <DownloadIcon className={variant === 'icon' ? '' : 'cv-icon-margin'} />
+                    <DownloadIcon className="cv-icon" />
                 )}
+            </motion.button>
 
-                {variant !== 'icon' && variant !== 'fab' && (
-                    <span>{isLoading ? 'Preparando...' : buttonLabel}</span>
+            <AnimatePresence>
+                {showToast && (
+                    <motion.div
+                        className="cv-toast"
+                        initial={{ opacity: 0, y: 50, x: '-50%' }}
+                        animate={{ opacity: 1, y: 0, x: '-50%' }}
+                        exit={{ opacity: 0, y: 20, x: '-50%' }}
+                    >
+                        CV aberto em nova aba!
+                    </motion.div>
                 )}
-            </button>
-
-            {/* Toast Notification */}
-            <div className={`cv-toast ${showToast ? 'cv-toast--visible' : ''}`} role="status" aria-live="polite">
-                CV aberto em nova aba!
-            </div>
+            </AnimatePresence>
         </>
     );
 };
