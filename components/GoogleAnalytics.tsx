@@ -14,19 +14,11 @@ const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-8MZE34H19
 
 export const GoogleAnalytics: React.FC = () => {
     const location = useLocation();
-    const { t, language } = useLanguage();
-    // Normalize language to ensure consistency (e.g. pt-BR -> pt)
-    const currentLang = language.split('-')[0];
+    const { t } = useLanguage();
 
     const [consentGiven, setConsentGiven] = useState(() => {
-        return localStorage.getItem('ga_consent_lang') === currentLang;
+        return localStorage.getItem('ga_consent_granted') === 'true';
     });
-
-    // Reset consent state when language changes
-    useEffect(() => {
-        const storedLang = localStorage.getItem('ga_consent_lang');
-        setConsentGiven(storedLang === currentLang);
-    }, [currentLang]);
 
     // Initialize GA4
     // useEffect for checking stored consent is removed as it is now handled in initial state
@@ -87,7 +79,7 @@ export const GoogleAnalytics: React.FC = () => {
             <div className="cookie-buttons">
                 <button
                     onClick={() => {
-                        localStorage.setItem('ga_consent_lang', currentLang);
+                        localStorage.setItem('ga_consent_granted', 'true');
                         setConsentGiven(true);
                     }}
                     className="cookie-btn-accept"
@@ -95,7 +87,10 @@ export const GoogleAnalytics: React.FC = () => {
                     {t('cookieConsent.accept')}
                 </button>
                 <button
-                    onClick={() => setConsentGiven(true)} // Just close for this session or implement 'deny' logic
+                    onClick={() => {
+                        localStorage.setItem('ga_consent_granted', 'true'); // Treat close as accept for now or implement deny
+                        setConsentGiven(true);
+                    }}
                     className="cookie-btn-close"
                 >
                     {t('cookieConsent.close')}
