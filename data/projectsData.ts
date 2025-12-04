@@ -9,7 +9,7 @@ import type { Project } from '../types';
 export const projectsData: Project[] = [
     {
         title: 'Integração Getnet SEP (Getnet by Santander)',
-        description: 'Responsável pela arquitetura Salesforce no Getnet SEP (Chile) para orquestração de terminais TMS. Desenhei a gestão de configuração e inventário, integrando com Node.js e APIs dos provedores Coasin & Transformapp para provisionamento automático. Resultado: processo padronizado, rastreabilidade total e redução drástica no tempo de onboarding e operação manual.',
+        description: 'Colaborei com a arquitetura Salesforce no Getnet SEP (Chile) para orquestração de terminais TMS. Desenhei a gestão de configuração e inventário, integrando com Node.js e APIs dos provedores Coasin & Transformapp para provisionamento automático. Resultado: processo padronizado, rastreabilidade total e redução drástica no tempo de onboarding e operação manual.',
         repoUrl: '#',
         liveUrl: 'https://www.santander.com/en/press-room/press-releases/2024/10/getnet-by-santander-launches-getnet-sep-a-solution-for-e-commerce-payments-in-brazil-argentina-mexico-and-chile-through-a-single-integration',
         imageUrl: '/images/getnet-project.png',

@@ -225,7 +225,7 @@ export const pt = {
         'projects.cta.live': 'Ver Projeto',
 
         'projects.getnet.title': 'Integração Getnet SEP (Getnet by Santander)',
-        'projects.getnet.description': 'Responsável pela arquitetura Salesforce no Getnet SEP (Chile) para orquestração de terminais TMS. Desenhei a gestão de configuração e inventário, integrando com Node.js e APIs dos provedores Coasin & Transformapp para provisionamento automático. Resultado: processo padronizado, rastreabilidade total e redução drástica no tempo de onboarding e operação manual.',
+        'projects.getnet.description': 'Colaborei com a arquitetura Salesforce no Getnet SEP (Chile) para orquestração de terminais TMS. Desenhei a gestão de configuração e inventário, integrando com Node.js e APIs dos provedores Coasin & Transformapp para provisionamento automático. Resultado: processo padronizado, rastreabilidade total e redução drástica no tempo de onboarding e operação manual.',
 
         'projects.pagonxt.title': 'PagoNxt (Santander) - Transformação Digital & CRM',
         'projects.pagonxt.description': 'Entreguei soluções end-to-end de CRM e Field Service (Service Cloud) no México e Chile. Liderei transformações digitais e integrações de API complexas, orquestrando migrações com Databricks e Apache Spark. Coordenei equipes multifuncionais para adoção e automação, alcançando 30% de redução de custos operacionais e elevando a eficiência e experiência do cliente.',
