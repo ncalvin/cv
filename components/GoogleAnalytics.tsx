@@ -66,6 +66,7 @@ export const GoogleAnalytics: React.FC = () => {
             page_path: location.pathname + location.search,
             page_title: document.title,
         });
+        console.log(`Google Analytics Page View: ${location.pathname + location.search}`);
     }, [location, consentGiven]);
 
     // Simple Consent Banner (for demonstration)

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -39,11 +40,13 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ direction = 'down',
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    const navigate = useNavigate();
+
     const handleLanguageChange = (langCode: string) => {
         if (langCode === 'pt') {
-            window.location.href = '/';
+            navigate('/');
         } else {
-            window.location.href = `/${langCode}`;
+            navigate(`/${langCode}`);
         }
         setIsOpen(false);
     };
