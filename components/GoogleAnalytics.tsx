@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -14,11 +14,21 @@ const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-8MZE34H19
 
 export const GoogleAnalytics: React.FC = () => {
     const location = useLocation();
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const prevLanguageRef = useRef(language);
 
     const [consentGiven, setConsentGiven] = useState(() => {
         return localStorage.getItem('ga_consent_granted') === 'true';
     });
+
+    // Reset consent when language changes
+    useEffect(() => {
+        if (prevLanguageRef.current !== language) {
+            localStorage.removeItem('ga_consent_granted');
+            setConsentGiven(false);
+            prevLanguageRef.current = language;
+        }
+    }, [language]);
 
     // Initialize GA4
     // useEffect for checking stored consent is removed as it is now handled in initial state
