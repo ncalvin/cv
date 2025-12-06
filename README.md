@@ -18,6 +18,7 @@ Um site de currículo moderno, responsivo e interativo com foco em impacto visua
 ## ✨ Características
 
 ### 🎨 Design Visual Impactante
+
 - **Hero Section** com foto profissional, frase de impacto e CTAs estratégicos
 - **Timeline Interativa** para experiência profissional e educação
 - **Gráficos Visuais** de habilidades com animações suaves
@@ -25,18 +26,21 @@ Um site de currículo moderno, responsivo e interativo com foco em impacto visua
 - **Seção de Resultados** com métricas de impacto
 
 ### 🌓 Tema Claro/Escuro
+
 - Alternância suave entre temas
 - Persistência da preferência do usuário (localStorage)
 - Respeita preferência do sistema operacional
 - Tokens de design consistentes
 
 ### 📱 Responsividade Total
+
 - Design mobile-first
 - Otimizado para tablets e desktops
 - Grid responsivo com breakpoints inteligentes
 - Imagens otimizadas com lazy loading
 
 ### ♿ Acessibilidade (WCAG AA)
+
 - Contraste adequado em todos os temas
 - Navegação por teclado completa
 - Labels ARIA apropriados
@@ -44,6 +48,7 @@ Um site de currículo moderno, responsivo e interativo com foco em impacto visua
 - Suporte a leitores de tela
 
 ### 🚀 Performance Otimizada
+
 - Tempo de carregamento < 2s
 - Code splitting automático
 - Lazy loading de imagens
@@ -51,6 +56,7 @@ Um site de currículo moderno, responsivo e interativo com foco em impacto visua
 - CSS puro (sem frameworks pesados)
 
 ### 🎭 Animações e Microinterações
+
 - Scroll animations com Intersection Observer
 - Hover effects suaves
 - Transições fluidas entre seções
@@ -73,28 +79,32 @@ Um site de currículo moderno, responsivo e interativo com foco em impacto visua
 
 ### Pré-requisitos
 
-- Node.js 18+ 
+- Node.js 18+
 - npm ou yarn
 
 ### Instalação
 
 1. **Clone o repositório**
+
    ```bash
    git clone https://github.com/newtoncalvin/professional-cv.git
    cd professional-cv
    ```
 
 2. **Instale as dependências**
+
    ```bash
    npm install
    ```
 
 3. **Execute o servidor de desenvolvimento**
+
    ```bash
    npm run dev
    ```
 
 4. **Abra no navegador**
+
    ```
    http://localhost:3000
    ```
@@ -145,18 +155,21 @@ newton-calvin-cv/
 ### Tokens de Cor
 
 **Modo Claro:**
+
 - Primary: `#2563eb` (Azul)
 - Accent: `#f59e0b` (Amarelo)
 - Background: `#ffffff`, `#f9fafb`, `#f3f4f6`
 - Text: `#111827`, `#6b7280`, `#9ca3af`
 
 **Modo Escuro:**
+
 - Primary: `#2563eb` (Azul)
 - Accent: `#f59e0b` (Amarelo)
 - Background: `#0f172a`, `#1e293b`, `#334155`
 - Text: `#f1f5f9`, `#cbd5e1`, `#94a3b8`
 
 ### Tipografia
+
 - Sans: System fonts (-apple-system, Segoe UI, Roboto)
 - Serif: Georgia, Times New Roman
 - Escala: clamp() para responsividade fluida
@@ -171,14 +184,17 @@ O projeto inclui integração com Google Analytics 4, respeitando a privacidade 
 
 ### Configuração
 
-1.  Crie uma propriedade no GA4 e obtenha o **Measurement ID** (ex: `G-XXXXXXXXXX`).
-2.  Adicione o ID no arquivo `.env` (crie se não existir):
+1. Crie uma propriedade no GA4 e obtenha o **Measurement ID** (ex: `G-XXXXXXXXXX`).
+2. Adicione o ID no arquivo `.env` (crie se não existir):
+
     ```env
     VITE_GA_MEASUREMENT_ID=G-SEU-ID-AQUI
     ```
+
     Ou edite diretamente em `src/components/GoogleAnalytics.tsx` (não recomendado para produção).
 
 ### Funcionalidades
+
 - **Carregamento Condicional**: O script do GA4 só é injetado após o usuário clicar em "Aceitar" no banner de consentimento.
 - **Anonimização de IP**: Configurado por padrão (`anonymize_ip: true`).
 - **Rastreamento de SPA**: Dispara eventos `page_view` automaticamente nas trocas de rota.
@@ -229,7 +245,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 Tech Lead | Fintech & Cloud Architecture Specialist
 
 - LinkedIn: [newtoncalvin](https://www.linkedin.com/in/newtoncalvin)
-- Email: newton.calvin@gmail.com
+- Email: <info@ncalvin.dev>
 - Portfolio: [Este site!](#)
 
 ---

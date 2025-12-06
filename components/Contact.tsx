@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/newton.calvin@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/info@ncalvin.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
               <LinkedinIcon style={{ width: '1.5rem', height: '1.5rem' }} />
             </a>
             <a
-              href="mailto:newton.calvin@gmail.com"
+              href="mailto:info@ncalvin.dev"
               style={{
                 display: 'flex',
                 alignItems: 'center',
