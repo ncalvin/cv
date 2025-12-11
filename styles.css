@@ -844,7 +844,7 @@ a:focus-visible {
   display: inline-block;
   padding: 0;
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.1),
     0 20px 40px -10px rgba(0, 0, 0, 0.5),
     0 0 80px -20px rgba(78, 123, 255, 0.3);
@@ -902,7 +902,7 @@ a:focus-visible {
 
 @media (min-width: 1024px) {
   .header-subtitle-wrapper {
-     justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 
@@ -2023,12 +2023,13 @@ a:focus-visible {
     opacity: 1;
   }
 }
+
 /* Utilities */
 .line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Header Styles */
@@ -2066,7 +2067,7 @@ a:focus-visible {
   display: inline-block;
   padding: 0;
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.1),
     0 20px 40px -10px rgba(0, 0, 0, 0.5),
     0 0 80px -20px rgba(78, 123, 255, 0.3);
@@ -2097,15 +2098,9 @@ a:focus-visible {
 .header-title {
   font-size: clamp(2rem, 8vw, 4.5rem);
   font-weight: 800;
-  margin-bottom: 0.25rem;
-  background: linear-gradient(90deg, #FFFFFF 0%, #6EA8FF 50%, #FFFFFF 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-text-primary);
   letter-spacing: -0.03em;
   line-height: 1.1;
-  animation: shimmer 8s ease-in-out infinite;
   position: relative;
 }
 

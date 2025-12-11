@@ -8,6 +8,8 @@ interface AvatarLogoProps {
 const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const [imageError, setImageError] = useState(false);
+
   const handleMouseEnter = () => {
     if (!disableHover) setIsHovered(true);
   };
@@ -30,30 +32,44 @@ const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false
         boxShadow: isHovered
           ? '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 0 3px var(--color-primary)'
           : '0 4px 12px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#cbd5e1', // Fallback background
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       role="img"
       aria-label="Avatar de Newton Calvin"
     >
-      <img
-        src="https://ui-avatars.com/api/?name=Newton+Calvin&size=400&background=2563eb&color=fff&bold=true"
-        alt="Newton Calvin - Tech Lead & Fintech Specialist"
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          transition: 'filter 0.3s ease, transform 0.3s ease',
-          filter: isHovered ? 'brightness(1.1)' : 'brightness(1)',
-          transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-        }}
-        loading="lazy"
-        onError={(e) => {
-          const target = e.target as HTMLImageElement;
-          target.src = "https://ui-avatars.com/api/?name=NC&size=400&background=2563eb&color=fff&bold=true";
-        }}
-      />
-      {isHovered && (
+      {!imageError ? (
+        <img
+          src="https://media.licdn.com/dms/image/v2/C4D03AQEO-QeYwOZLSA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1643052547532?e=1767225600&v=beta&t=6WmZ2Yp2F6SekVj743GYXKKedARHOgnh1MEGNSgk6lg"
+          alt="Newton Calvin"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transition: 'filter 0.3s ease, transform 0.3s ease',
+            filter: isHovered ? 'brightness(1.1)' : 'brightness(1)',
+            transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+          }}
+          loading="lazy"
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt="Avatar Fallback"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            background: '#cbd5e1',
+          }}
+        />
+      )}
+      {isHovered && !imageError && (
         <div
           style={{
             position: 'absolute',
