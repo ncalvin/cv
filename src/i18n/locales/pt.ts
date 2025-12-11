@@ -294,6 +294,11 @@ export const pt = {
 
 
 
+
+        // Footer
+        'footer.rights': 'Todos os direitos reservados.',
+        'footer.madeWith': 'Feito com ❤️ e tecnologia moderna',
+
         // SEO
         'seo.defaultTitle': 'Newton Calvin - Tech Lead & Arquiteto de Soluções',
         'seo.defaultDescription': 'Tech Lead especializado em Fintech, Arquiteto de Soluções Salesforce e Desenvolvedor Full-Stack.',
