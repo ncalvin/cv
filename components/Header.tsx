@@ -69,7 +69,7 @@ const Header: React.FC = () => {
 
 
             <h1 className="header-title animate-on-scroll">
-              Newton Luiz Calvin
+              Newton Calvin
             </h1>
 
             <div className="subtitle-wrapper animate-on-scroll">

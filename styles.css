@@ -2096,11 +2096,11 @@ a:focus-visible {
 }
 
 .header-title {
-  font-size: clamp(2rem, 8vw, 4.5rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
   color: var(--color-text-primary);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   position: relative;
 }
 
