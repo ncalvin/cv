@@ -10,7 +10,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, title, children, style }) => {
   return (
-    <section id={id} className="section" style={{ padding: '8rem 0', position: 'relative', ...style }}>
+    <section id={id} className="section" style={{ position: 'relative', ...style }}>
       <div className="container">
         {title && (
           <ScrollReveal width="100%">
