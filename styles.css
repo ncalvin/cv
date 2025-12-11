@@ -1037,7 +1037,7 @@ a:focus-visible {
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
   display: block;
 }
-}
+
 
 .experience-list-item::before {
   content: '';
