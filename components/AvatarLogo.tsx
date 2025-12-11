@@ -37,7 +37,7 @@ const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false
       aria-label="Avatar de Newton Calvin"
     >
       <img
-        src="https://media.licdn.com/dms/image/v2/C4D03AQEO-QeYwOZLSA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1643052547532?e=1765411200&v=beta&t=Aem6f08IebwhdtQhny88Qhc3CxYXGDI3NX_8yoQJFkU"
+        src="https://ui-avatars.com/api/?name=Newton+Calvin&size=400&background=2563eb&color=fff&bold=true"
         alt="Newton Calvin - Tech Lead & Fintech Specialist"
         style={{
           width: '100%',
@@ -48,6 +48,10 @@ const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false
           transform: isHovered ? 'scale(1.1)' : 'scale(1)',
         }}
         loading="lazy"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = "https://ui-avatars.com/api/?name=NC&size=400&background=2563eb&color=fff&bold=true";
+        }}
       />
       {isHovered && (
         <div
