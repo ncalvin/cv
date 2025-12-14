@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Section from './Section';
+import { motion } from 'framer-motion';
 import { softSkillsData, type SoftSkill } from '../data/softSkillsData';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -164,9 +165,12 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
   const accentBorder = 'rgba(59, 130, 246, 0.25)';
 
   return (
-    <div
+    <motion.div
       ref={cardRef}
-      className="animate-on-scroll"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       style={{
         perspective: prefersReducedMotion ? 'none' : '1300px',
         cursor: 'pointer',
@@ -379,7 +383,7 @@ const SoftSkillFlipCard: React.FC<SoftSkillFlipCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
