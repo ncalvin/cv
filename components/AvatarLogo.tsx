@@ -7,6 +7,8 @@ interface AvatarLogoProps {
 
 
 
+import avatarImg from '@/src/assets/images/avatar.jpg';
+
 const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,7 +48,7 @@ const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false
     >
       {!imageError ? (
         <img
-          src="/images/avatar.png"
+          src={avatarImg}
           alt="Newton Calvin"
           style={{
             width: '100%',
