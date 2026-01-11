@@ -44,7 +44,7 @@ const AvatarLogo: React.FC<AvatarLogoProps> = ({ size = 40, disableHover = false
     >
       {!imageError ? (
         <img
-          src="https://media.licdn.com/dms/image/v2/C4D03AQEO-QeYwOZLSA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1643052547532?e=1767225600&v=beta&t=6WmZ2Yp2F6SekVj743GYXKKedARHOgnh1MEGNSgk6lg"
+          src="/images/avatar.png"
           alt="Newton Calvin"
           style={{
             width: '100%',
